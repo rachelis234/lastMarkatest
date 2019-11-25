@@ -1,0 +1,73 @@
+<!-- <app-table-data></app-table-data> -->
+
+<!-- <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource"> -->
+
+<!-- Position Column -->
+<!-- <ng-container matColumnDef="class_name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.class_name}} </td>
+      </ng-container> -->
+
+<!-- Name Column -->
+<!-- <ng-container matColumnDef="level">
+        <th mat-header-cell *matHeaderCellDef> Level </th>
+        <td mat-cell *matCellDef="let element"> {{element.level}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div> -->
+<p>6tgu6</p>
+<p>6tgu6</p>
+<p>6tgu6</p>
+<p>6tgu6</p>
+
+
+<ul>
+  <li *ngFor="let i of userService.classesForTeacher" value="i.class_id">
+    <a [routerLink]="'/teachersettings/viewClasses/viewStudents/'+i.class_id">{{i.class_name}}</a>
+  </li>
+</ul>
+<!-- <mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let row">
+          <mat-form-field floatPlaceholder="{{ row.editing ? 'float' : 'never'}}">
+            <input [formControl]="row.validator.controls['name']" placeholder="Name" matInput>
+          </mat-form-field>
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="age">
+        <mat-header-cell *matHeaderCellDef> Age </mat-header-cell>
+        <mat-cell *matCellDef="let row">
+          <mat-form-field floatPlaceholder="{{ row.editing ? 'float' : 'never'}}">
+            <input [formControl]="row.validator.controls['age']" type="number" placeholder="Age" matInput>
+          </mat-form-field>
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="actionsColumn">
+        <mat-header-cell *matHeaderCellDef>
+          <button mat-icon-button color="accent" (click)="dataSource.createNew()"><i class="fa fa-plus mat-icon"></i></button>
+        </mat-header-cell>
+        <mat-cell *matCellDef="let row">
+          <button *ngIf="!row.editing" mat-icon-button color="primary" focusable="false" (click)="row.startEdit()">
+                <i class="fa fa-pencil mat-icon"></i>
+              </button>
+          <button *ngIf="row.editing" mat-icon-button color="primary" focusable="false" (click)="row.confirmEditCreate()">
+                <i class="fa fa-check mat-icon"></i>
+              </button>
+          <button mat-icon-button color="primary" focusable="false" (click)="row.cancelOrDelete()">
+                <i class="fa fa-times mat-icon"></i>
+              </button>
+        </mat-cell>
+      </ng-container>
+     
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table> -->
+
+<router-outlet></router-outlet>

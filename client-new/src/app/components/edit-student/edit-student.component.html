@@ -1,0 +1,29 @@
+<form>
+  <p>hgjhds</p>
+  <p>hgjhds</p>
+  <p>hgjhds</p>
+  <p>hgjhds</p>
+<div>
+  <label>Student Identity: </label>
+<input type="text" [(ngModel)]="student.user.user_id_number" name="userIdNumber">
+</div>
+<div>
+  <label>Student Password: </label>
+  <input type="text" [(ngModel)]="student.user.user_password" name="userpassword">
+  </div>
+  <div>
+    <label>Student Name: </label>
+    <input type="text" [(ngModel)]="student.user.user_name" name="username">
+    </div>
+    <div>
+      <label>Student Email: </label>
+      <input type="text" [(ngModel)]="student.user.user_mail" name="usermail">
+      </div>
+      <div>
+        <label>Has Extra Time: </label>
+        <input type="text" [(ngModel)]="student.extra_time" name="userextratime">
+        </div>
+        <div>
+          <input type="button" (click)="editStudent()" value="Edit">
+        </div>
+</form>

@@ -1,0 +1,46 @@
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DAL\bin\Debug\DAL.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DAL\bin\Debug\DAL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DAL\bin\Debug\DAL.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DAL\bin\Debug\EntityFramework.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DAL\bin\Debug\EntityFramework.SqlServer.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DAL\bin\Debug\EntityFramework.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DAL\bin\Debug\EntityFramework.SqlServer.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DAL\obj\Debug\DAL.csproj.CopyComplete
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DAL\obj\Debug\DAL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DAL\obj\Debug\DAL.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DAL\bin\Debug\DAL.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DAL\bin\Debug\DAL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DAL\bin\Debug\DAL.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DAL\bin\Debug\EntityFramework.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DAL\bin\Debug\EntityFramework.SqlServer.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DAL\bin\Debug\EntityFramework.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DAL\bin\Debug\EntityFramework.SqlServer.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DAL\obj\Debug\DAL.csproj.CopyComplete
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DAL\obj\Debug\DAL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DAL\obj\Debug\DAL.pdb
+D:\r&d\testServer\DAL\bin\Debug\DAL.dll.config
+D:\r&d\testServer\DAL\bin\Debug\DAL.dll
+D:\r&d\testServer\DAL\bin\Debug\DAL.pdb
+D:\r&d\testServer\DAL\bin\Debug\EntityFramework.dll
+D:\r&d\testServer\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\r&d\testServer\DAL\bin\Debug\EntityFramework.xml
+D:\r&d\testServer\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\r&d\testServer\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\r&d\testServer\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\r&d\testServer\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\r&d\testServer\DAL\obj\Debug\DAL.dll
+D:\r&d\testServer\DAL\obj\Debug\DAL.pdb
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DAL\bin\Debug\DAL.dll.config
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DAL\bin\Debug\DAL.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DAL\bin\Debug\DAL.pdb
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DAL\bin\Debug\EntityFramework.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DAL\bin\Debug\EntityFramework.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DAL\obj\Debug\DAL.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DAL\obj\Debug\DAL.pdb

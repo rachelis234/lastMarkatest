@@ -1,0 +1,30 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  table {
+    width: 100%;
+  }
+  .selectdemoBasicUsage md-input-container {
+    margin-right: 10px; }
+  
+   md-input-container label {
+      -webkit-transform: translate3d(0,6px,0) scale(.75) !important;
+      transform: translate3d(0,6px,0) scale(.75) !important;
+     -webkit-transition: width .4s cubic-bezier(.25,.8,.25,1),-webkit-transform .4s cubic-bezier(.25,.8,.25,1) !important;
+     transition: width .4s cubic-bezier(.25,.8,.25,1),-webkit-transform .4s cubic-bezier(.25,.8,.25,1) !important;
+     transition: transform .4s cubic-bezier(.25,.8,.25,1),width .4s cubic-bezier(.25,.8,.25,1) !important;
+     transition: transform .4s cubic-bezier(.25,.8,.25,1),width .4s cubic-bezier(.25,.8,.25,1),-webkit-transform .4s cubic-bezier(.25,.8,.25,1) !important;
+     opacity: 1 !important;
+     top: auto !important;
+  }
+  
+  md-input-container .md-select-placeholder > span:not(.md-select-icon) {
+    color: transparent;
+  }
+  

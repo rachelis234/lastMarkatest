@@ -1,0 +1,20 @@
+<h1>the test!</h1>
+<br/>
+<div *ngIf="userService.solveTest">
+    
+    <app-american-question *ngFor="let ques of sortedQuestion[0]" [ques]="ques" >
+    </app-american-question>
+</div>
+<br/>
+<div *ngIf="userService.solveTest">
+    <app-yes-no-question *ngFor="let ques of sortedQuestion[1]" [ques]="ques">
+    </app-yes-no-question>
+</div>
+<br/>
+ <!-- [questions]="sortedQuestion[2]" -->
+<div *ngIf="userService.solveTest">
+    <app-match-question  ></app-match-question>
+</div>
+<br/>
+<br/>
+<p>timer!!!!!!!!!!!!!!!!!!!!!!</p>

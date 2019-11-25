@@ -1,0 +1,123 @@
+<form class="example-form">
+    <div>
+            <p>fgfdgd</p>
+            <p>fgfdgd</p>
+            <p>fgfdgd</p>
+            <p>fgfdgd</p>
+            <p>fgfdgd</p>
+            <mat-form-field class="example-full-width" required>
+                <input type="text" name="studentName" placeholder="Name" matInput [(ngModel)]="student.user.user_name">
+              </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email" [formControl]="emailFormControl" name="studentEmail" [(ngModel)]="student.user.user_mail"
+                   [errorStateMatcher]="matcher">
+            <mat-hint>Errors appear instantly!</mat-hint>
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        <!-- <input type="email" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email"
+            name="studentEmail" [(ngModel)]="student.user.user_mail"> -->
+    </div>
+    <div>
+        <mat-form-field>
+            <input type="password" required matInput placeholder="Password" name="studentPass" [(ngModel)]="student.user.user_password">
+          </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <input type="text" required placeholder="IdNumber" name="studentIdNum"
+            [(ngModel)]="student.user.user_id_number" matInput>
+          </mat-form-field>
+    </div>
+    <div>
+            <mat-form-field>
+                    <mat-label>Class</mat-label>
+                    <mat-select name="classId" #classId [(ngModel)]="student.class_id" [formControl]="classControl" required>
+                      <mat-option>--</mat-option>
+                      <mat-option *ngFor="let cls of userService.classesForTeacher" [value]="cls.class_id">
+                        {{cls.class_name}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="classControl.hasError('required')">This field is required</mat-error>
+                    <mat-hint>{{classControl.value?.sound}}</mat-hint>
+                  </mat-form-field>
+        <!-- <select name="classId" #classId [(ngModel)]="student.class_id">
+            <option *ngFor="let cls of userService.classesForTeacher" [value]="cls.class_id">
+                {{cls.class_name}}
+            </option>
+        </select> -->
+    </div>
+    <!-- <div>
+        <h4>mat-select</h4>
+        <mat-form-field>
+            <mat-label>Class</mat-label>
+            <mat-select name="classId" #classId [(ngModel)]="student.class_id">
+                <mat-option>None</mat-option>
+                <mat-option *ngFor="let cls of userService.classesForTeacher" [value]="cls.class_id">{{cls.class_name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div> -->
+    <div>
+            <label id="example-radio-group-label">Extra time:</label>
+            <mat-radio-group
+              aria-labelledby="example-radio-group-label"
+              class="example-radio-group"
+              [(ngModel)]="student.extra_time" name="extraTime" >
+              <mat-radio-button class="example-radio-button" [value]="true">
+                Yes
+              </mat-radio-button>
+              <mat-radio-button class="example-radio-button" [value]="false">
+                   No
+                  </mat-radio-button>
+            </mat-radio-group>
+        <!-- <input type="radio" name="extraTime" value="true" [(ngModel)]="student.extra_time">כן
+        <input type="radio" name="extraTime" value="false" [(ngModel)]="student.extra_time">לא -->
+    </div>
+    <input type="button" value="הוסף" (click)="addPupil()">
+</form>
+<button (click)="download()">הורדה</button>
+<input type="file" accept=".xlsx" #file value="להוספת רשימת תלמידים מקובץ" (change)="handleFileInput($event.target.files)">
+<!-- <mat-file-upload-queue #fileUploadQueue [fileAlias]="'file'" [httpUrl]="'http://localhost:4200/api/read-excel/test'">
+    <mat-file-upload [file]="file" [id]="i" *ngFor="let file of fileUploadQueue.files; let i = index"></mat-file-upload>
+</mat-file-upload-queue> -->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!-- <div class="container">
+	<div class="row">
+      <div class="col-lg-12">
+          <h1>Table Records</h1>
+          <table class="table table-bordered table-hover" id="tableAddRow">
+              <thead>
+                  <tr>
+                      <th>User Id</th>
+                      <th>User Name</th>
+                      <th>Email</th>
+                      <th>Password</th>
+                      <th>Extra Time</th>
+                      <th style="width:10px"><span class="glyphicon glyphicon-plus addBtn" id="addBtn_0"></span></th> 
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr id="tr_0">
+                      <td><input type="text" id="userId" class="form-control" [(ngModel)]="excelObj.convertList[0]"/></td> 
+                      <td><input type="text" id="userName" class="form-control" [(ngModel)]="excelObj.convertList[1]"/></td> 
+                      <td><input type="text" id="Email" class="form-control" [(ngModel)]="excelObj.convertList[2]"/></td>
+                      <td><input type="text" id="password" class="form-control" [(ngModel)]="excelObj.convertList[3]"/></td>
+                      <td><input type="text" id="ExtraTime" class="form-control" [(ngModel)]="excelObj.convertList[4]"/></td> 
+                    <td><span class="glyphicon glyphicon-minus addBtnRemove" id="addBtnRemove_0"></span></td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+    </div>
+</div> -->
+<input type="button" value="הוסף רשימת תלמידים" (click)="uploadFileToActivity()">

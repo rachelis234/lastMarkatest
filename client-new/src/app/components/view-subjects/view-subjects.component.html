@@ -1,0 +1,12 @@
+<div>
+  <p>dfsdf</p>
+  <p>dfsdf</p>
+  <p>dfsdf</p>
+  <p>dfsdf</p>
+  <p>dfsdf</p>
+    <select name="select" #subject [(ngModel)]="categoryId">
+      <option *ngFor="let category of userService.categoriesForTeacher" [value]="category.category_id">
+        {{category.category_name}}
+      </option>
+    </select>
+  </div>

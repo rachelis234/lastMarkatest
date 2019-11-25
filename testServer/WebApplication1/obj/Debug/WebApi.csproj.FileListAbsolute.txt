@@ -1,0 +1,470 @@
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\obj\Debug\WebApi.csprojAssemblyReference.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\obj\Debug\WebApi.csproj.CoreCompileInputs.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\obj\Debug\WebApplication1.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\obj\Debug\WebApplication1.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\ApplicationInsights.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\WebApplication1.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\WebApplication1.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\WebApplication1.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\csc.exe
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\csc.exe.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\csc.rsp
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\csi.exe
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\csi.exe.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\csi.rsp
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.AppContext.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.Console.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.IO.Compression.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.IO.Pipes.AccessControl.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.IO.Pipes.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.Security.AccessControl.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.Security.Claims.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.Security.Principal.Windows.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.ValueTuple.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\vbc.exe
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\vbc.exe.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\vbc.rsp
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\VBCSCompiler.exe
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\Antlr3.Runtime.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\BL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\DAL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\DTO.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\Microsoft.AI.Agent.Intercept.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\Microsoft.AI.DependencyCollector.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\Microsoft.AI.PerfCounterCollector.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\Microsoft.AI.ServerTelemetryChannel.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\Microsoft.AI.Web.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\Microsoft.AI.WindowsServer.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\Microsoft.ApplicationInsights.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\Newtonsoft.Json.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Diagnostics.DiagnosticSource.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Net.Http.Formatting.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.Cors.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.Helpers.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.Http.Cors.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.Http.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.Http.WebHost.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.Mvc.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.Optimization.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.Razor.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.WebPages.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.WebPages.Razor.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\WebGrease.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\EntityFramework.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\BL.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\BL.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\DAL.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\DAL.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\DTO.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Net.Http.Formatting.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.Http.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.Http.Cors.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\Newtonsoft.Json.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.Helpers.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.Http.WebHost.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.Mvc.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.Optimization.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.Razor.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.WebPages.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Web.WebPages.Razor.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\Antlr3.Runtime.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\System.Diagnostics.DiagnosticSource.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\Microsoft.AI.DependencyCollector.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\Microsoft.AI.WindowsServer.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\Microsoft.AI.Web.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\EntityFramework.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\obj\Debug\WebApi.csproj.CopyComplete
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\EntityFramework.SqlServer.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\EntityFramework.SqlServer.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\WebApplication1\bin\DTO.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\ApplicationInsights.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\WebApplication1.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\WebApplication1.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\WebApplication1.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\Antlr3.Runtime.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\BL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\DTO.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\EntityFramework.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\EntityFramework.SqlServer.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\Microsoft.AI.Agent.Intercept.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\Microsoft.AI.DependencyCollector.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\Microsoft.AI.PerfCounterCollector.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\Microsoft.AI.ServerTelemetryChannel.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\Microsoft.AI.Web.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\Microsoft.AI.WindowsServer.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\Microsoft.ApplicationInsights.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\Newtonsoft.Json.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Diagnostics.DiagnosticSource.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Net.Http.Formatting.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.Cors.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.Helpers.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.Http.Cors.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.Http.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.Http.WebHost.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.Mvc.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.Optimization.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.Razor.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.WebPages.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.WebPages.Razor.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\WebGrease.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\DAL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\BL.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\BL.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\DTO.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\DTO.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\EntityFramework.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\EntityFramework.SqlServer.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Net.Http.Formatting.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.Http.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.Http.Cors.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\Newtonsoft.Json.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.Helpers.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.Http.WebHost.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.Mvc.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.Optimization.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.Razor.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.WebPages.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Web.WebPages.Razor.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\Antlr3.Runtime.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.Diagnostics.DiagnosticSource.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\Microsoft.AI.DependencyCollector.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\Microsoft.AI.WindowsServer.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\Microsoft.AI.Web.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\DAL.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\DAL.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\obj\Debug\WebApi.csproj.CoreCompileInputs.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\obj\Debug\WebApi.csproj.CopyComplete
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\obj\Debug\WebApplication1.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\obj\Debug\WebApplication1.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\obj\Debug\WebApi.csprojAssemblyReference.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.ValueTuple.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\VBCSCompiler.exe
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\DocumentFormat.OpenXml.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\DocumentFormat.OpenXml.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\EPPlus.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.IO.FileSystem.Primitives.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\System.IO.Packaging.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\EPPlus.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\csc.exe
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\csc.exe.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\csc.rsp
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\csi.exe
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\csi.exe.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\csi.rsp
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.AppContext.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.Console.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.IO.Compression.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.IO.Pipes.AccessControl.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.IO.Pipes.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.Security.AccessControl.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.Security.Claims.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.Security.Principal.Windows.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\vbc.exe
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\vbc.exe.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\vbc.rsp
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\r&d\testServer\WebApplication1\bin\ApplicationInsights.config
+D:\r&d\testServer\WebApplication1\bin\WebApplication1.dll.config
+D:\r&d\testServer\WebApplication1\bin\WebApplication1.dll
+D:\r&d\testServer\WebApplication1\bin\WebApplication1.pdb
+D:\r&d\testServer\WebApplication1\bin\roslyn\csc.exe
+D:\r&d\testServer\WebApplication1\bin\roslyn\csc.exe.config
+D:\r&d\testServer\WebApplication1\bin\roslyn\csc.rsp
+D:\r&d\testServer\WebApplication1\bin\roslyn\csi.exe
+D:\r&d\testServer\WebApplication1\bin\roslyn\csi.exe.config
+D:\r&d\testServer\WebApplication1\bin\roslyn\csi.rsp
+D:\r&d\testServer\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\r&d\testServer\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\r&d\testServer\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.AppContext.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.Console.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.IO.Compression.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.IO.Pipes.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.Security.AccessControl.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.Security.Claims.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.Security.Principal.Windows.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.ValueTuple.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\r&d\testServer\WebApplication1\bin\roslyn\vbc.exe
+D:\r&d\testServer\WebApplication1\bin\roslyn\vbc.exe.config
+D:\r&d\testServer\WebApplication1\bin\roslyn\vbc.rsp
+D:\r&d\testServer\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\r&d\testServer\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\r&d\testServer\WebApplication1\bin\Antlr3.Runtime.dll
+D:\r&d\testServer\WebApplication1\bin\BL.dll
+D:\r&d\testServer\WebApplication1\bin\DocumentFormat.OpenXml.dll
+D:\r&d\testServer\WebApplication1\bin\DTO.dll
+D:\r&d\testServer\WebApplication1\bin\EntityFramework.dll
+D:\r&d\testServer\WebApplication1\bin\EntityFramework.SqlServer.dll
+D:\r&d\testServer\WebApplication1\bin\EPPlus.dll
+D:\r&d\testServer\WebApplication1\bin\Microsoft.AI.Agent.Intercept.dll
+D:\r&d\testServer\WebApplication1\bin\Microsoft.AI.DependencyCollector.dll
+D:\r&d\testServer\WebApplication1\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\r&d\testServer\WebApplication1\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\r&d\testServer\WebApplication1\bin\Microsoft.AI.Web.dll
+D:\r&d\testServer\WebApplication1\bin\Microsoft.AI.WindowsServer.dll
+D:\r&d\testServer\WebApplication1\bin\Microsoft.ApplicationInsights.dll
+D:\r&d\testServer\WebApplication1\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\r&d\testServer\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\r&d\testServer\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\r&d\testServer\WebApplication1\bin\Newtonsoft.Json.dll
+D:\r&d\testServer\WebApplication1\bin\System.Diagnostics.DiagnosticSource.dll
+D:\r&d\testServer\WebApplication1\bin\System.IO.FileSystem.Primitives.dll
+D:\r&d\testServer\WebApplication1\bin\System.IO.Packaging.dll
+D:\r&d\testServer\WebApplication1\bin\System.Net.Http.Formatting.dll
+D:\r&d\testServer\WebApplication1\bin\System.Web.Cors.dll
+D:\r&d\testServer\WebApplication1\bin\System.Web.Helpers.dll
+D:\r&d\testServer\WebApplication1\bin\System.Web.Http.Cors.dll
+D:\r&d\testServer\WebApplication1\bin\System.Web.Http.dll
+D:\r&d\testServer\WebApplication1\bin\System.Web.Http.WebHost.dll
+D:\r&d\testServer\WebApplication1\bin\System.Web.Mvc.dll
+D:\r&d\testServer\WebApplication1\bin\System.Web.Optimization.dll
+D:\r&d\testServer\WebApplication1\bin\System.Web.Razor.dll
+D:\r&d\testServer\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\r&d\testServer\WebApplication1\bin\System.Web.WebPages.dll
+D:\r&d\testServer\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\r&d\testServer\WebApplication1\bin\WebGrease.dll
+D:\r&d\testServer\WebApplication1\bin\DAL.dll
+D:\r&d\testServer\WebApplication1\bin\BL.pdb
+D:\r&d\testServer\WebApplication1\bin\BL.dll.config
+D:\r&d\testServer\WebApplication1\bin\DTO.pdb
+D:\r&d\testServer\WebApplication1\bin\DTO.dll.config
+D:\r&d\testServer\WebApplication1\bin\DocumentFormat.OpenXml.xml
+D:\r&d\testServer\WebApplication1\bin\EntityFramework.xml
+D:\r&d\testServer\WebApplication1\bin\EntityFramework.SqlServer.xml
+D:\r&d\testServer\WebApplication1\bin\EPPlus.xml
+D:\r&d\testServer\WebApplication1\bin\System.Net.Http.Formatting.xml
+D:\r&d\testServer\WebApplication1\bin\System.Web.Http.xml
+D:\r&d\testServer\WebApplication1\bin\System.Web.Http.Cors.xml
+D:\r&d\testServer\WebApplication1\bin\Newtonsoft.Json.xml
+D:\r&d\testServer\WebApplication1\bin\System.Web.Helpers.xml
+D:\r&d\testServer\WebApplication1\bin\System.Web.Http.WebHost.xml
+D:\r&d\testServer\WebApplication1\bin\System.Web.Mvc.xml
+D:\r&d\testServer\WebApplication1\bin\System.Web.Optimization.xml
+D:\r&d\testServer\WebApplication1\bin\System.Web.Razor.xml
+D:\r&d\testServer\WebApplication1\bin\System.Web.WebPages.xml
+D:\r&d\testServer\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\r&d\testServer\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\r&d\testServer\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\r&d\testServer\WebApplication1\bin\System.Diagnostics.DiagnosticSource.xml
+D:\r&d\testServer\WebApplication1\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\r&d\testServer\WebApplication1\bin\Microsoft.AI.DependencyCollector.xml
+D:\r&d\testServer\WebApplication1\bin\Microsoft.AI.WindowsServer.xml
+D:\r&d\testServer\WebApplication1\bin\Microsoft.AI.Web.xml
+D:\r&d\testServer\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\r&d\testServer\WebApplication1\bin\DAL.pdb
+D:\r&d\testServer\WebApplication1\bin\DAL.dll.config
+D:\r&d\testServer\WebApplication1\obj\Debug\WebApi.csprojAssemblyReference.cache
+D:\r&d\testServer\WebApplication1\obj\Debug\WebApi.csproj.CoreCompileInputs.cache
+D:\r&d\testServer\WebApplication1\obj\Debug\WebApi.csproj.CopyComplete
+D:\r&d\testServer\WebApplication1\obj\Debug\WebApplication1.dll
+D:\r&d\testServer\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\ApplicationInsights.config
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\WebApplication1.dll.config
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\WebApplication1.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\WebApplication1.pdb
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\csc.exe
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\csc.exe.config
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\csc.rsp
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\csi.exe
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\csi.exe.config
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\csi.rsp
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.AppContext.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.Console.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.IO.Compression.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.IO.Pipes.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.Security.Claims.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.ValueTuple.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\vbc.exe
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\vbc.exe.config
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\vbc.rsp
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\VBCSCompiler.exe
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\Antlr3.Runtime.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\BL.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\DocumentFormat.OpenXml.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\DTO.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\EntityFramework.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\EntityFramework.SqlServer.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\EPPlus.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\Microsoft.AI.Web.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\Microsoft.ApplicationInsights.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\Newtonsoft.Json.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.IO.FileSystem.Primitives.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.IO.Packaging.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Net.Http.Formatting.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.Cors.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.Helpers.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.Http.Cors.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.Http.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.Http.WebHost.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.Mvc.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.Optimization.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.Razor.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.WebPages.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.WebPages.Razor.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\WebGrease.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\DAL.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\BL.pdb
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\BL.dll.config
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\DTO.pdb
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\DTO.dll.config
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\DocumentFormat.OpenXml.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\EntityFramework.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\EntityFramework.SqlServer.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\EPPlus.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Net.Http.Formatting.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.Http.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.Http.Cors.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\Newtonsoft.Json.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.Helpers.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.Http.WebHost.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.Mvc.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.Optimization.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.Razor.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.WebPages.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Web.WebPages.Razor.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\Antlr3.Runtime.pdb
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\Microsoft.AI.Web.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\DAL.pdb
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\bin\DAL.dll.config
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\obj\Debug\WebApi.csprojAssemblyReference.cache
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\obj\Debug\WebApi.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\obj\Debug\WebApi.csproj.CopyComplete
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\WebApplication1\obj\Debug\WebApplication1.pdb

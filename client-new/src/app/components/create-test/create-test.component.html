@@ -1,0 +1,281 @@
+
+
+
+
+<!-- <div ng-controller="AppCtrl as ctrl" class="md-padding selectdemoBasicUsage" ng-cloak="" layout="column" ng-app="MyApp">
+  <md-card-content>
+    <div layout="row">
+      <md-input-container>
+        <label>Date</label>
+        <md-datepicker name="testDate" [(ngModel)]="test.test_date"></md-datepicker>
+      </md-input-container>
+    </div>
+  </md-card-content>
+</div> -->
+
+
+
+<!-- <md-card>
+      
+  
+        <md-card-content>
+          <div layout="row">
+    
+            <md-input-container>
+              <label>Date</label>
+              <md-datepicker name="testDate" [(ngModel)]="test.test_date"></md-datepicker>
+            </md-input-container>
+            
+          </div>
+        </md-card-content>
+      </md-card>
+   -->
+<!-- <md-card>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">Battle Preferences</span>
+          <span class="md-subhead">Choose wisely if you want to win.</span>
+        </md-card-title-text>
+      </md-card-title>
+  
+     
+    </md-card> -->
+
+
+
+<form class="example-form">
+  <div>
+    <p>fgfdgd</p>
+    <p>fgfdgd</p>
+    <p>fgfdgd</p>
+    <label>
+      הכנס תאריך מבחן
+    </label>
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="testDate" [(ngModel)]="test.test_date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <!-- <div>
+    <md-input-container>
+
+      <md-datepicker #testDate name="testDate" [(ngModel)]="test.test_date"/>
+    </md-input-container>
+  </div> -->
+  <div>
+    <label>
+      הכנס שעת התחלת המבחן
+    </label>
+  </div>
+  <div>
+    <input type="time" #startTest name="startTest" [(ngModel)]="test.test_start_time">
+  </div>
+  <div>
+    <label>
+      הכנס שעת סיום המבחן
+    </label>
+  </div>
+  <div>
+    <input type="time" #endTest name="endTest" [(ngModel)]="test.test_end_time">
+  </div>
+  <div>
+    <label>
+      הכנס ציון עובר
+    </label>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <input type="number" matInput #overMark min="1" max="100" name="ovarMark" [(ngModel)]="test.over_mark">
+    </mat-form-field>
+  </div>
+  <div>
+    <label>
+      הכנס רמת מבחן
+    </label>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <input type="number" #level matInput min="1" max="10" name="level" [(ngModel)]="test.level">
+    </mat-form-field>
+  </div>
+  <div>
+    <input type="radio" name="generate" value="true" [(ngModel)]="generate" (change)="onSelectionChange()">מבחן אוטומטי
+    <input type="radio" name="generate" value="false" [(ngModel)]="generate" (change)="onSelectionChange()">מבחן ביצירה
+    עצמית
+  </div>
+
+  <ng-container *ngIf="simpleTest">
+    <div>
+       <mat-form-field>
+         <mat-label>Classes</mat-label>
+         <mat-select [formControl]="classes" multiple>
+           <mat-option *ngFor="let cls of userService.classesForTeacher" [value]="cls">{{cls.class_name}}</mat-option>
+         </mat-select>
+       </mat-form-field>
+     </div>
+     <!-- <div>
+         <mat-form-field>
+           <mat-label>Questions</mat-label>
+           <mat-select [formControl]="questions" multiple>
+             <mat-option *ngFor="let q of userService.classesForTeacher" [value]="q">{{cls.class_name}}</mat-option>
+           </mat-select>
+         </mat-form-field>
+       </div> -->
+     <div>
+       <mat-form-field class="example-full-width">
+         <input type="text" placeholder="Pick one subject" aria-label="Number" matInput [formControl]="myControl"
+           [matAutocomplete]="auto" (change)="onchangeInput()">
+         <mat-autocomplete #auto="matAutocomplete">
+           <mat-option *ngFor="let option of filteredOptions | async" [value]="option.category_name"
+             (onSelectionChange)="onSelect(option)">
+             {{option.category_name}}
+           </mat-option>
+         </mat-autocomplete>
+       </mat-form-field>
+     </div>
+     <div *ngIf="selectCategory">
+       <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+ 
+         <!-- Checkbox Column -->
+         <ng-container matColumnDef="select">
+           <th mat-header-cell *matHeaderCellDef>
+             <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()"
+               [indeterminate]="selection.hasValue() && !isAllSelected()" [aria-label]="checkboxLabel()">
+             </mat-checkbox>
+           </th>
+ 
+           <!-- //--------------------------------------------------------------------- -->
+ 
+           <td mat-cell *matCellDef="let row">
+             <!-- (click)="$event.stopPropagation()" 
+                 
+                             
+                             -->
+             <mat-checkbox (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)"
+               [aria-label]="checkboxLabel(row)">
+             </mat-checkbox>
+           </td>
+         </ng-container>
+         <!-- Sub Category Column -->
+         <ng-container matColumnDef="name">
+           <th mat-header-cell *matHeaderCellDef> Sub category </th>
+           <td mat-cell *matCellDef="let element" (click)="$event.stopPropagation()"> {{element.sub_category_name}} </td>
+         </ng-container>
+         <ng-container matColumnDef="questions">
+           <th mat-header-cell *matHeaderCellDef> Questions </th>
+           <td mat-cell *matCellDef="let element" (click)="$event.stopPropagation()">
+             <mat-form-field>
+               <mat-label (click)="$event.stopPropagation()">Questions</mat-label>
+               <mat-select [formControl]="questions" multiple (click)="$event.stopPropagation()">
+                 <mat-option *ngFor="let q of userService.questionsforTeacher[0]" (onSelectionChange)="onSelectQuestion($event)" [value]="q">{{q.question_text}}</mat-option>
+               </mat-select>
+             </mat-form-field>
+           </td>
+         </ng-container>
+ 
+         <!-- Weight Column -->
+         <!-- <ng-container matColumnDef="questions">
+             <th mat-header-cell *matHeaderCellDef> Weight </th>
+             <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+           </ng-container> -->
+ 
+         <!-- Symbol Column -->
+         <!-- <ng-container matColumnDef="symbol">
+             <th mat-header-cell *matHeaderCellDef> Symbol </th>
+             <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+           </ng-container> -->
+ 
+         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+         <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+           (click)="selection.toggle(row); onSelectSubCat(row)">
+         </tr>
+         <!-- <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+               (click)="selection.toggle(row); onSelectSubCat(row)">
+           </tr> -->
+       </table>
+     </div>
+     <!-- //---------------------------------------------------------------------- -->
+ 
+     <!-- <div *ngIf="selectCategory">
+         <mat-form-field (clickOutside)="afterSelect()">
+           <mat-label>Sub Categories</mat-label>
+           <mat-select [formControl]="subCategories" multiple>
+             <mat-option *ngFor="let subCat of apiService.subCategoriesForCat" [value]="subCat" (onSelectionChange)="changeStatus()">{{subCat.sub_category_name}}</mat-option>
+           </mat-select>
+         </mat-form-field>
+       </div> -->
+     <!-- <div *ngIf="afterSelectSubCat">
+         <mat-form-field>
+           <mat-label>Questions</mat-label>
+           <mat-select [formControl]="questions" multiple>
+             <mat-option *ngFor="let subCat of apiService.subCategoriesForCat" [value]="subCat">{{subCat.sub_category_name}}</mat-option>
+           </mat-select>
+         </mat-form-field>
+       </div> -->
+ </ng-container>
+<ng-container *ngIf="generatedTest">
+  <div>
+    <mat-form-field>
+      <mat-label>Classes</mat-label>
+      <mat-select [formControl]="classes" multiple>
+        <mat-option *ngFor="let cls of userService.classesForTeacher" [value]="cls">{{cls.class_name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <input type="text" placeholder="Pick one subject" aria-label="Number" matInput [formControl]="myControl"
+        [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <input type="number" #american matInput name="american" [(ngModel)]="generatedTest.american">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <input type="number" #yesNo matInput name="yesNo" [(ngModel)]="generatedTest.yesNo">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <input type="number" #match matInput name="match" [(ngModel)]="generatedTest.match">
+    </mat-form-field>
+  </div>
+</ng-container> 
+  <div>
+    <input type="submit" value="create" (click)="createTest()">
+  </div>
+</form>
+
+test_id:number;
+test_date:Date;
+test_start_time:Time;
+test_end_time:Time;
+over_mark:number;
+enable:boolean;
+level:number;
+
+
+generate
+test:Test;
+classes:Class[];
+subCategories:Sub_category[];
+american:number;
+yesNo:number;
+match:number;
+
+
+simple
+test:Test;
+classes:Class[];
+questions:Question[];

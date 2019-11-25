@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="rdTestsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="answer">
+    <Key>
+      <PropertyRef Name="answer_id" />
+    </Key>
+    <Property Name="answer_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="question_id" Type="Int32" Nullable="false" />
+    <Property Name="answer_text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="isCorrect" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="question" Relationship="Self.FK_answer_question" FromRole="answer" ToRole="question" />
+    <NavigationProperty Name="student_answer" Relationship="Self.FK_student_answer_answer" FromRole="answer" ToRole="student_answer" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="category_id" />
+    </Key>
+    <Property Name="category_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category_name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="teacher_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="sub_category" Relationship="Self.FK__sub_categ__categ__00200768" FromRole="category" ToRole="sub_category" />
+    <NavigationProperty Name="teacher" Relationship="Self.FK_category_teacher" FromRole="category" ToRole="teacher" />
+  </EntityType>
+  <EntityType Name="class">
+    <Key>
+      <PropertyRef Name="class_id" />
+    </Key>
+    <Property Name="class_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="class_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="teacher_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="teacher" Relationship="Self.FK_class_teacher" FromRole="class" ToRole="teacher" />
+    <NavigationProperty Name="students" Relationship="Self.FK_student_class" FromRole="class" ToRole="student" />
+    <NavigationProperty Name="tests" Relationship="Self.classTest" FromRole="class" ToRole="test" />
+  </EntityType>
+  <EntityType Name="design">
+    <Key>
+      <PropertyRef Name="design_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="design_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="question">
+    <Key>
+      <PropertyRef Name="question_id" />
+    </Key>
+    <Property Name="question_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sub_category_id" Type="Int32" Nullable="false" />
+    <Property Name="type_id" Type="Int32" Nullable="false" />
+    <Property Name="question_text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="question_level" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="answers" Relationship="Self.FK_answer_question" FromRole="question" ToRole="answer" />
+    <NavigationProperty Name="sub_category" Relationship="Self.FK_question_sub_category" FromRole="question" ToRole="sub_category" />
+    <NavigationProperty Name="type" Relationship="Self.FK_question_type" FromRole="question" ToRole="type" />
+    <NavigationProperty Name="tests" Relationship="Self.test_question" FromRole="question" ToRole="test" />
+  </EntityType>
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="student_id" />
+    </Key>
+    <Property Name="student_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="class_id" Type="Int32" Nullable="false" />
+    <Property Name="extra_time" Type="Boolean" Nullable="false" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="class" Relationship="Self.FK_student_class" FromRole="student" ToRole="class" />
+    <NavigationProperty Name="student_answer" Relationship="Self.FK_student_answer_student" FromRole="student" ToRole="student_answer" />
+    <NavigationProperty Name="user" Relationship="Self.FK_student_user" FromRole="student" ToRole="user" />
+  </EntityType>
+  <EntityType Name="student_answer">
+    <Key>
+      <PropertyRef Name="student_answer_id" />
+    </Key>
+    <Property Name="student_answer_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="student_id" Type="Int32" Nullable="false" />
+    <Property Name="question_test_id" Type="Int32" Nullable="false" />
+    <Property Name="ans_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="answer" Relationship="Self.FK_student_answer_answer" FromRole="student_answer" ToRole="answer" />
+    <NavigationProperty Name="student" Relationship="Self.FK_student_answer_student" FromRole="student_answer" ToRole="student" />
+  </EntityType>
+  <EntityType Name="sub_category">
+    <Key>
+      <PropertyRef Name="sub_category_id" />
+    </Key>
+    <Property Name="sub_category_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category_id" Type="Int32" Nullable="false" />
+    <Property Name="sub_category_name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="category" Relationship="Self.FK__sub_categ__categ__00200768" FromRole="sub_category" ToRole="category" />
+    <NavigationProperty Name="questions" Relationship="Self.FK_question_sub_category" FromRole="sub_category" ToRole="question" />
+    <NavigationProperty Name="tests" Relationship="Self.sub_category_test" FromRole="sub_category" ToRole="test" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="teacher">
+    <Key>
+      <PropertyRef Name="teacher_id" />
+    </Key>
+    <Property Name="teacher_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="design_id" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="categories" Relationship="Self.FK_category_teacher" FromRole="teacher" ToRole="category" />
+    <NavigationProperty Name="classes" Relationship="Self.FK_class_teacher" FromRole="teacher" ToRole="class" />
+    <NavigationProperty Name="user" Relationship="Self.FK_teacher_user" FromRole="teacher" ToRole="user" />
+  </EntityType>
+  <EntityType Name="test">
+    <Key>
+      <PropertyRef Name="test_id" />
+    </Key>
+    <Property Name="test_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="test_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="test_start_time" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="test_end_time" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="over_mark" Type="Double" Nullable="false" />
+    <Property Name="level" Type="Int32" Nullable="false" />
+    <Property Name="quesPercent" Type="Double" />
+    <NavigationProperty Name="classes" Relationship="Self.classTest" FromRole="test" ToRole="class" />
+    <NavigationProperty Name="sub_category" Relationship="Self.sub_category_test" FromRole="test" ToRole="sub_category" />
+    <NavigationProperty Name="questions" Relationship="Self.test_question" FromRole="test" ToRole="question" />
+  </EntityType>
+  <EntityType Name="type">
+    <Key>
+      <PropertyRef Name="type_id" />
+    </Key>
+    <Property Name="type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="questions" Relationship="Self.FK_question_type" FromRole="type" ToRole="question" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id_number" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="user_password" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="user_name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="user_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="students" Relationship="Self.FK_student_user" FromRole="user" ToRole="student" />
+    <NavigationProperty Name="teachers" Relationship="Self.FK_teacher_user" FromRole="user" ToRole="teacher" />
+  </EntityType>
+  <Association Name="FK_answer_question">
+    <End Role="question" Type="Self.question" Multiplicity="1" />
+    <End Role="answer" Type="Self.answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="question">
+        <PropertyRef Name="question_id" />
+      </Principal>
+      <Dependent Role="answer">
+        <PropertyRef Name="question_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_student_answer_answer">
+    <End Role="answer" Type="Self.answer" Multiplicity="1" />
+    <End Role="student_answer" Type="Self.student_answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="answer">
+        <PropertyRef Name="answer_id" />
+      </Principal>
+      <Dependent Role="student_answer">
+        <PropertyRef Name="ans_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__sub_categ__categ__00200768">
+    <End Role="category" Type="Self.category" Multiplicity="1" />
+    <End Role="sub_category" Type="Self.sub_category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category">
+        <PropertyRef Name="category_id" />
+      </Principal>
+      <Dependent Role="sub_category">
+        <PropertyRef Name="category_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_category_teacher">
+    <End Role="teacher" Type="Self.teacher" Multiplicity="1" />
+    <End Role="category" Type="Self.category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher">
+        <PropertyRef Name="teacher_id" />
+      </Principal>
+      <Dependent Role="category">
+        <PropertyRef Name="teacher_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_class_teacher">
+    <End Role="teacher" Type="Self.teacher" Multiplicity="1" />
+    <End Role="class" Type="Self.class" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher">
+        <PropertyRef Name="teacher_id" />
+      </Principal>
+      <Dependent Role="class">
+        <PropertyRef Name="teacher_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_student_class">
+    <End Role="class" Type="Self.class" Multiplicity="1" />
+    <End Role="student" Type="Self.student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_question_sub_category">
+    <End Role="sub_category" Type="Self.sub_category" Multiplicity="1" />
+    <End Role="question" Type="Self.question" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sub_category">
+        <PropertyRef Name="sub_category_id" />
+      </Principal>
+      <Dependent Role="question">
+        <PropertyRef Name="sub_category_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_question_type">
+    <End Role="type" Type="Self.type" Multiplicity="1" />
+    <End Role="question" Type="Self.question" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="type">
+        <PropertyRef Name="type_id" />
+      </Principal>
+      <Dependent Role="question">
+        <PropertyRef Name="type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_student_answer_student">
+    <End Role="student" Type="Self.student" Multiplicity="1" />
+    <End Role="student_answer" Type="Self.student_answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="student_answer">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_student_user">
+    <End Role="user" Type="Self.user" Multiplicity="1" />
+    <End Role="student" Type="Self.student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_teacher_user">
+    <End Role="user" Type="Self.user" Multiplicity="1" />
+    <End Role="teacher" Type="Self.teacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="teacher">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="classTest">
+    <End Role="class" Type="Self.class" Multiplicity="*" />
+    <End Role="test" Type="Self.test" Multiplicity="*" />
+  </Association>
+  <Association Name="sub_category_test">
+    <End Role="sub_category" Type="Self.sub_category" Multiplicity="*" />
+    <End Role="test" Type="Self.test" Multiplicity="*" />
+  </Association>
+  <Association Name="test_question">
+    <End Role="question" Type="Self.question" Multiplicity="*" />
+    <End Role="test" Type="Self.test" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="answers" EntityType="Self.answer" />
+    <EntitySet Name="categories" EntityType="Self.category" />
+    <EntitySet Name="classes" EntityType="Self.class" />
+    <EntitySet Name="designs" EntityType="Self.design" />
+    <EntitySet Name="questions" EntityType="Self.question" />
+    <EntitySet Name="students" EntityType="Self.student" />
+    <EntitySet Name="student_answer" EntityType="Self.student_answer" />
+    <EntitySet Name="sub_category" EntityType="Self.sub_category" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="teachers" EntityType="Self.teacher" />
+    <EntitySet Name="tests" EntityType="Self.test" />
+    <EntitySet Name="types" EntityType="Self.type" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <AssociationSet Name="FK_answer_question" Association="Self.FK_answer_question">
+      <End Role="question" EntitySet="questions" />
+      <End Role="answer" EntitySet="answers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_student_answer_answer" Association="Self.FK_student_answer_answer">
+      <End Role="answer" EntitySet="answers" />
+      <End Role="student_answer" EntitySet="student_answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__sub_categ__categ__00200768" Association="Self.FK__sub_categ__categ__00200768">
+      <End Role="category" EntitySet="categories" />
+      <End Role="sub_category" EntitySet="sub_category" />
+    </AssociationSet>
+    <AssociationSet Name="FK_category_teacher" Association="Self.FK_category_teacher">
+      <End Role="teacher" EntitySet="teachers" />
+      <End Role="category" EntitySet="categories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_class_teacher" Association="Self.FK_class_teacher">
+      <End Role="teacher" EntitySet="teachers" />
+      <End Role="class" EntitySet="classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_student_class" Association="Self.FK_student_class">
+      <End Role="class" EntitySet="classes" />
+      <End Role="student" EntitySet="students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_question_sub_category" Association="Self.FK_question_sub_category">
+      <End Role="sub_category" EntitySet="sub_category" />
+      <End Role="question" EntitySet="questions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_question_type" Association="Self.FK_question_type">
+      <End Role="type" EntitySet="types" />
+      <End Role="question" EntitySet="questions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_student_answer_student" Association="Self.FK_student_answer_student">
+      <End Role="student" EntitySet="students" />
+      <End Role="student_answer" EntitySet="student_answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_student_user" Association="Self.FK_student_user">
+      <End Role="user" EntitySet="users" />
+      <End Role="student" EntitySet="students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_teacher_user" Association="Self.FK_teacher_user">
+      <End Role="user" EntitySet="users" />
+      <End Role="teacher" EntitySet="teachers" />
+    </AssociationSet>
+    <AssociationSet Name="classTest" Association="Self.classTest">
+      <End Role="class" EntitySet="classes" />
+      <End Role="test" EntitySet="tests" />
+    </AssociationSet>
+    <AssociationSet Name="sub_category_test" Association="Self.sub_category_test">
+      <End Role="sub_category" EntitySet="sub_category" />
+      <End Role="test" EntitySet="tests" />
+    </AssociationSet>
+    <AssociationSet Name="test_question" Association="Self.test_question">
+      <End Role="question" EntitySet="questions" />
+      <End Role="test" EntitySet="tests" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,34 @@
+    <div>
+      <mat-form-field>
+        <mat-label>Classes</mat-label>
+        <mat-select [formControl]="classes" multiple>
+          <mat-option *ngFor="let cls of userService.classesForTeacher" [value]="cls">{{cls.class_name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="example-full-width">
+        <input type="text" placeholder="Pick one subject" aria-label="Number" matInput [formControl]="myControl"
+          [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="example-full-width">
+        <input type="number" #american matInput name="american" [(ngModel)]="generatedTest.american">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="example-full-width">
+        <input type="number" #yesNo matInput name="yesNo" [(ngModel)]="generatedTest.yesNo">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="example-full-width">
+        <input type="number" #match matInput name="match" [(ngModel)]="generatedTest.match">
+      </mat-form-field>
+    </div>

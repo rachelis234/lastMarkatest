@@ -1,0 +1,45 @@
+<!-- <div>
+  <input type="button" value="לצפייה במבחן שנפתר">
+</div> -->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<h1>student home</h1>
+<div class="navbar-wrapper">
+  <div class="container-fluid">
+    <nav class="navbar navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+            aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">MarkATest</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <!-- <ul class="nav navbar-nav">
+            <li class="active"><a [routerLink]="['/studentHome']" class="">Home</a></li> -->
+            
+          <!-- <ul class="nav navbar-nav pull-right">
+            <li class=" dropdown"><a class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false">Signed in as <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Change Password</a></li>
+                <li><a [routerLink]="['/teacherSettings/myProfile']">My Profile</a></li>
+              </ul>
+            </li>
+            <li class=""><a (click)="logOut()">Logout</a></li>
+          </ul> -->
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<a [routerLink]="['/studentHome/solveTest']"><button class="btn btn-success pull-right" > לפתירת מבחן נוכחי</button></a>
+
+
+<router-outlet></router-outlet>

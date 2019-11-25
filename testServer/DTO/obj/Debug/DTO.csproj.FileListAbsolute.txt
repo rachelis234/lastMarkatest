@@ -1,0 +1,73 @@
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\DTO\bin\Debug\DTO.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\DTO\bin\Debug\DTO.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\DTO\bin\Debug\DAL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\DTO\bin\Debug\EntityFramework.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\DTO\bin\Debug\DAL.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\DTO\bin\Debug\DAL.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\DTO\bin\Debug\EntityFramework.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\DTO\obj\Debug\DTO.csproj.CopyComplete
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\DTO\obj\Debug\DTO.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\DTO\obj\Debug\DTO.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DTO\bin\Debug\DTO.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DTO\bin\Debug\DTO.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DTO\obj\Debug\DTO.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DTO\obj\Debug\DTO.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DTO\bin\Debug\DTO.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DTO\bin\Debug\DAL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DTO\bin\Debug\EntityFramework.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DTO\bin\Debug\EntityFramework.SqlServer.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DTO\bin\Debug\DAL.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DTO\bin\Debug\DAL.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DTO\bin\Debug\EntityFramework.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DTO\bin\Debug\EntityFramework.SqlServer.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DTO\obj\Debug\DTO.csproj.CopyComplete
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DTO\obj\Debug\DTO.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DTO\obj\Debug\DTO.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DTO\bin\Debug\DTO.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DTO\bin\Debug\DTO.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DTO\bin\Debug\DTO.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DTO\bin\Debug\DAL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DTO\bin\Debug\EntityFramework.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DTO\bin\Debug\EntityFramework.SqlServer.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DTO\bin\Debug\DAL.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DTO\bin\Debug\DAL.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DTO\bin\Debug\EntityFramework.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DTO\bin\Debug\EntityFramework.SqlServer.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\DTO\obj\Debug\DTO.csproj.CopyComplete
+D:\r&d\testServer\DTO\bin\Debug\DTO.dll.config
+D:\r&d\testServer\DTO\bin\Debug\DTO.dll
+D:\r&d\testServer\DTO\bin\Debug\DTO.pdb
+D:\r&d\testServer\DTO\bin\Debug\DAL.dll
+D:\r&d\testServer\DTO\bin\Debug\EntityFramework.dll
+D:\r&d\testServer\DTO\bin\Debug\EntityFramework.SqlServer.dll
+D:\r&d\testServer\DTO\bin\Debug\DAL.pdb
+D:\r&d\testServer\DTO\bin\Debug\DAL.dll.config
+D:\r&d\testServer\DTO\bin\Debug\EntityFramework.xml
+D:\r&d\testServer\DTO\bin\Debug\EntityFramework.SqlServer.xml
+D:\r&d\testServer\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\r&d\testServer\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\r&d\testServer\DTO\obj\Debug\DTO.csproj.CopyComplete
+D:\r&d\testServer\DTO\obj\Debug\DTO.dll
+D:\r&d\testServer\DTO\obj\Debug\DTO.pdb
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DTO\bin\Debug\DTO.dll.config
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DTO\bin\Debug\DTO.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DTO\bin\Debug\DTO.pdb
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DTO\bin\Debug\DAL.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DTO\bin\Debug\EntityFramework.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DTO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DTO\bin\Debug\DAL.pdb
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DTO\bin\Debug\DAL.dll.config
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DTO\bin\Debug\EntityFramework.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DTO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DTO\obj\Debug\DTO.csproj.CopyComplete
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DTO\obj\Debug\DTO.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DTO\obj\Debug\DTO.pdb

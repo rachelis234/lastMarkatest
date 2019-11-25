@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="rdTestsModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="answers">
+      <EntityTypeMapping TypeName="rdTestsModel.answer">
+        <MappingFragment StoreEntitySet="answer">
+          <ScalarProperty Name="answer_id" ColumnName="answer_id" />
+          <ScalarProperty Name="question_id" ColumnName="question_id" />
+          <ScalarProperty Name="answer_text" ColumnName="answer_text" />
+          <ScalarProperty Name="isCorrect" ColumnName="isCorrect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="rdTestsModel.category">
+        <MappingFragment StoreEntitySet="category">
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="category_name" ColumnName="category_name" />
+          <ScalarProperty Name="teacher_id" ColumnName="teacher_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classes">
+      <EntityTypeMapping TypeName="rdTestsModel.class">
+        <MappingFragment StoreEntitySet="class">
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="class_name" ColumnName="class_name" />
+          <ScalarProperty Name="teacher_id" ColumnName="teacher_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="designs">
+      <EntityTypeMapping TypeName="rdTestsModel.design">
+        <MappingFragment StoreEntitySet="design">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="design_id" ColumnName="design_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="questions">
+      <EntityTypeMapping TypeName="rdTestsModel.question">
+        <MappingFragment StoreEntitySet="question">
+          <ScalarProperty Name="question_id" ColumnName="question_id" />
+          <ScalarProperty Name="sub_category_id" ColumnName="sub_category_id" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="question_text" ColumnName="question_text" />
+          <ScalarProperty Name="question_level" ColumnName="question_level" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="students">
+      <EntityTypeMapping TypeName="rdTestsModel.student">
+        <MappingFragment StoreEntitySet="student">
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="extra_time" ColumnName="extra_time" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="student_answer">
+      <EntityTypeMapping TypeName="rdTestsModel.student_answer">
+        <MappingFragment StoreEntitySet="student_answer">
+          <ScalarProperty Name="student_answer_id" ColumnName="student_answer_id" />
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+          <ScalarProperty Name="question_test_id" ColumnName="question_test_id" />
+          <ScalarProperty Name="ans_id" ColumnName="ans_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sub_category">
+      <EntityTypeMapping TypeName="rdTestsModel.sub_category">
+        <MappingFragment StoreEntitySet="sub_category">
+          <ScalarProperty Name="sub_category_id" ColumnName="sub_category_id" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="sub_category_name" ColumnName="sub_category_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="rdTestsModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="teachers">
+      <EntityTypeMapping TypeName="rdTestsModel.teacher">
+        <MappingFragment StoreEntitySet="teacher">
+          <ScalarProperty Name="teacher_id" ColumnName="teacher_id" />
+          <ScalarProperty Name="design_id" ColumnName="design_id" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tests">
+      <EntityTypeMapping TypeName="rdTestsModel.test">
+        <MappingFragment StoreEntitySet="test">
+          <ScalarProperty Name="test_id" ColumnName="test_id" />
+          <ScalarProperty Name="test_date" ColumnName="test_date" />
+          <ScalarProperty Name="test_start_time" ColumnName="test_start_time" />
+          <ScalarProperty Name="test_end_time" ColumnName="test_end_time" />
+          <ScalarProperty Name="over_mark" ColumnName="over_mark" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="quesPercent" ColumnName="quesPercent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="types">
+      <EntityTypeMapping TypeName="rdTestsModel.type">
+        <MappingFragment StoreEntitySet="type">
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="type_name" ColumnName="type_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="rdTestsModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="user_id_number" ColumnName="user_id_number" />
+          <ScalarProperty Name="user_password" ColumnName="user_password" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="user_mail" ColumnName="user_mail" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="classTest" TypeName="rdTestsModel.classTest" StoreEntitySet="classTest">
+      <EndProperty Name="class">
+        <ScalarProperty Name="class_id" ColumnName="class_id" />
+      </EndProperty>
+      <EndProperty Name="test">
+        <ScalarProperty Name="test_id" ColumnName="test_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="sub_category_test" TypeName="rdTestsModel.sub_category_test" StoreEntitySet="sub_category_test">
+      <EndProperty Name="sub_category">
+        <ScalarProperty Name="sub_category_id" ColumnName="sub_category_id" />
+      </EndProperty>
+      <EndProperty Name="test">
+        <ScalarProperty Name="test_id" ColumnName="test_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="test_question" TypeName="rdTestsModel.test_question" StoreEntitySet="test_question">
+      <EndProperty Name="question">
+        <ScalarProperty Name="question_id" ColumnName="question_id" />
+      </EndProperty>
+      <EndProperty Name="test">
+        <ScalarProperty Name="test_id" ColumnName="test_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

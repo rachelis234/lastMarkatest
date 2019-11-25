@@ -1,0 +1,32 @@
+<form>
+    <div>
+        <p>fgfdgd</p>
+        <p>fgfdgd</p>
+        <p>fgfdgd</p>
+        <p>fgfdgd</p>
+        <p>fgfdgd</p>
+        <!-- <form [formGroup]="stateForm">
+            <mat-form-field>
+              <input type="text" matInput placeholder="States Group" formControlName="stateGroup" required [matAutocomplete]="autoGroup">
+                <mat-autocomplete #autoGroup="matAutocomplete">
+                  <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
+                    <mat-option *ngFor="let name of group.names" [value]="name">
+                      {{name}}
+                    </mat-option>
+                </mat-optgroup>
+              </mat-autocomplete>
+            </mat-form-field>
+          </form> -->
+      <input type="text" placeholder="sub theme name" name="subName" [(ngModel)]="subTheme.sub_category_name">
+    </div>
+    <div>
+        <select name="select" #subject [(ngModel)]="subTheme.category_id">
+            <option *ngFor="let cat of userService.categoriesForTeacher" [value]="cat.category_id">
+              {{cat.category_name}}
+            </option>
+        </select>
+    </div>
+    <div>
+      <input type="button" (click)="addSubTheme()" value="הוספה">
+    </div>
+  </form>

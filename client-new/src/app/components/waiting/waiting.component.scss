@@ -1,0 +1,76 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  border-bottom: 1px solid #9a9a9a;
+  margin: 0 auto;
+  padding: 15px 0;
+  width: 60%;
+  color: #3a3a3a;
+  
+  small {
+    display: block;
+    margin: 10px 0 0;
+    font-size: 0.5em;
+  }
+}
+
+ul.loader {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  margin: auto;
+  width: 100px; height: 100px;
+  padding: 0;
+  list-style-type: none;
+  
+  li.circle {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0; left: 0;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    animation: 2s ease-in infinite;
+    
+    &.orange {
+      border-color: #FFA500;
+      transform: rotateZ(-45deg);
+      animation-name: rotateOrange;
+    }
+    
+    &.blue {
+      border-color: #1BA8DB;
+      animation-name: rotateBlue;
+    }
+    
+    &.green {
+      border-color: #4FC3A0;
+      animation-name: rotateGreen;
+    }
+  }
+}
+
+@keyframes rotateOrange {
+  0% {
+    transform: rotateZ(-45deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateZ(-45deg) rotateY(360deg);
+  }
+}
+
+@keyframes rotateBlue {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotateGreen {
+  0% {
+    transform: rotateZ(45deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateZ(45deg) rotateY(360deg);
+  }
+}

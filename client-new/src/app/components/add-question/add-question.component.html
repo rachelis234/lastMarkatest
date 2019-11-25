@@ -1,0 +1,78 @@
+<form>
+  <!-- <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+                <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+                  <button mat-icon-button disabled></button>
+                  {{node.item}}
+                </mat-tree-node>
+                <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
+                  <button mat-icon-button
+                          [attr.aria-label]="'toggle ' + node.filename" matTreeNodeToggle>
+                    <mat-icon class="mat-icon-rtl-mirror">
+                      {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                    </mat-icon>
+                  </button>
+                  {{node.item}}
+                  <mat-progress-bar *ngIf="node.isLoading"
+                                    mode="indeterminate"
+                                    class="example-tree-progress-bar"></mat-progress-bar>
+                </mat-tree-node>
+              </mat-tree> -->
+
+
+
+  <!-- <tree-root [nodes]="nodes" [options]="options">
+            <ng-template #treeNodeTemplate let-node let-index="index">
+                 <a (click)="nodeClick(node.data)">{{ node.data.name }}</a>
+            </ng-template>
+        </tree-root>                 -->
+
+
+  <div>
+    <select name="select" #subject [(ngModel)]="categoryId" (ngModelChange)="getSubCategoriesForCat()">
+      <option *ngFor="let cat of userService.categoriesForTeacher" [value]="cat.category_id">
+        {{cat.category_name}}
+      </option>
+    </select>
+  </div>
+  <div *ngIf="categoryId">
+    <select name="subC" #subCategory [(ngModel)]="question.sub_category_id">
+      <option *ngFor="let subC of apiService.subCategoriesForCat" [value]="subC.sub_category_id">
+        {{subC.sub_category_name}}
+      </option>
+    </select>
+  </div>
+  <div>
+    <p>{{this.enum}}</p>
+  </div>
+  <div *ngFor="let type of apiService.types">
+    <label for="typeId{{type}}">
+      <input id="typeId{{type}}" [value]='type.type_id' type="radio" name="qType" [(ngModel)]="question.type_id">
+      {{type.type_name}}
+    </label>
+  </div>
+  <div *ngIf="type.type_id==1">
+    <label>
+      הכנס טקסט של השאלה
+    </label>
+    <input type="text" name="questionText" [(ngModel)]="question.question_text">
+  </div>
+  <div>
+    <label>הכנס טקסט של תשובות</label>
+  <input type="text" >
+</div>
+  <div>
+    <label>
+      הכנס רמת שאלה
+    </label>
+    <input type="number" min="1" max="20" [(ngModel)]="question.level" name="qlevel">
+  </div>
+  <div>
+    <input type="button" value="Add" (click)="addQuestion()">
+  </div>
+</form>
+
+sub_category_id: number;
+type_id: number
+question_text: string;
+level: number;
+}

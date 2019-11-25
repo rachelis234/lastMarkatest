@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="20a68aae5d2648a1a9c2228b528705a3" Name="Diagram1">
+        <EntityTypeShape EntityType="rdTestsModel.answer" Width="1.5" PointX="12" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="rdTestsModel.category" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="rdTestsModel.class" Width="1.5" PointX="5.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="rdTestsModel.design" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="rdTestsModel.question" Width="1.5" PointX="9.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="rdTestsModel.student" Width="1.5" PointX="7.5" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="rdTestsModel.student_answer" Width="1.5" PointX="14.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="rdTestsModel.sub_category" Width="1.5" PointX="7.5" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="rdTestsModel.sysdiagram" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="rdTestsModel.teacher" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="rdTestsModel.test" Width="1.5" PointX="12" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="rdTestsModel.type" Width="1.5" PointX="7.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="rdTestsModel.user" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <AssociationConnector Association="rdTestsModel.FK_answer_question" ManuallyRouted="false" />
+        <AssociationConnector Association="rdTestsModel.FK_student_answer_answer" ManuallyRouted="false" />
+        <AssociationConnector Association="rdTestsModel.FK__sub_categ__categ__00200768" ManuallyRouted="false" />
+        <AssociationConnector Association="rdTestsModel.FK_category_teacher" ManuallyRouted="false" />
+        <AssociationConnector Association="rdTestsModel.FK_class_teacher" ManuallyRouted="false" />
+        <AssociationConnector Association="rdTestsModel.FK_student_class" ManuallyRouted="false" />
+        <AssociationConnector Association="rdTestsModel.FK_question_sub_category" ManuallyRouted="false" />
+        <AssociationConnector Association="rdTestsModel.FK_question_type" ManuallyRouted="false" />
+        <AssociationConnector Association="rdTestsModel.FK_student_answer_student" ManuallyRouted="false" />
+        <AssociationConnector Association="rdTestsModel.FK_student_user" ManuallyRouted="false" />
+        <AssociationConnector Association="rdTestsModel.FK_teacher_user" ManuallyRouted="false" />
+        <AssociationConnector Association="rdTestsModel.classTest" ManuallyRouted="false" />
+        <AssociationConnector Association="rdTestsModel.sub_category_test" ManuallyRouted="false" />
+        <AssociationConnector Association="rdTestsModel.test_question" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

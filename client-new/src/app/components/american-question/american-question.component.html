@@ -1,0 +1,20 @@
+<p>american-question works!</p>
+
+<label id="example-radio-group-label">{{ques.question_text}}</label>
+<mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
+  <mat-radio-button class="example-radio-button" *ngFor="let ans of answers" [value]="ans"
+    (change)="onSelectedAnswer($event)">
+    {{ans.answer_text}}
+  </mat-radio-button>
+</mat-radio-group>
+
+<!-- <label id="example-radio-group-label">Pick your favorite season</label>
+<mat-radio-group
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group"
+  [(ngModel)]="">
+  <mat-radio-button class="example-radio-button" *ngFor="let ans of answers" [value]="season">
+    {{ans.answer_text}}
+  </mat-radio-button>
+</mat-radio-group>
+<div>Your answer is: {{favoriteSeason}}</div> -->

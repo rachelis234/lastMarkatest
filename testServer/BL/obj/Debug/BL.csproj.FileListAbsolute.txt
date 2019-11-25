@@ -1,0 +1,107 @@
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\BL\bin\Debug\BL.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\BL\bin\Debug\BL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\BL\bin\Debug\BL.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\BL\bin\Debug\DAL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\BL\bin\Debug\DTO.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\BL\bin\Debug\EntityFramework.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\BL\bin\Debug\EntityFramework.SqlServer.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\BL\bin\Debug\DAL.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\BL\bin\Debug\DAL.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\BL\bin\Debug\DTO.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\BL\bin\Debug\EntityFramework.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\BL\bin\Debug\EntityFramework.SqlServer.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\BL\obj\Debug\BL.csprojAssemblyReference.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\BL\obj\Debug\BL.csproj.CopyComplete
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\BL\obj\Debug\BL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\Tests1\BL\obj\Debug\BL.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\BL\obj\Debug\BL.csprojAssemblyReference.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\BL\bin\Debug\BL.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\BL\bin\Debug\BL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\BL\bin\Debug\BL.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\BL\bin\Debug\DAL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\BL\bin\Debug\DTO.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\BL\bin\Debug\EntityFramework.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\BL\bin\Debug\EntityFramework.SqlServer.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\BL\bin\Debug\DAL.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\BL\bin\Debug\DAL.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\BL\bin\Debug\DTO.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\BL\bin\Debug\EntityFramework.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\BL\bin\Debug\EntityFramework.SqlServer.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\BL\obj\Debug\BL.csproj.CopyComplete
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\BL\obj\Debug\BL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\BL\obj\Debug\BL.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\BL\bin\Debug\DTO.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\Tests1\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\obj\Debug\BL.csprojAssemblyReference.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\obj\Debug\BL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\obj\Debug\BL.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\bin\Debug\BL.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\bin\Debug\BL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\bin\Debug\BL.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\bin\Debug\DAL.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\bin\Debug\DTO.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\bin\Debug\EntityFramework.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\bin\Debug\EntityFramework.SqlServer.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\bin\Debug\DAL.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\bin\Debug\DAL.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\bin\Debug\DTO.pdb
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\bin\Debug\DTO.dll.config
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\bin\Debug\EntityFramework.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\bin\Debug\EntityFramework.SqlServer.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\obj\Debug\BL.csproj.CopyComplete
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\bin\Debug\DocumentFormat.OpenXml.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\bin\Debug\DocumentFormat.OpenXml.xml
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\bin\Debug\System.IO.FileSystem.Primitives.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\bin\Debug\System.IO.Packaging.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\bin\Debug\EPPlus.dll
+Y:\group 2 תשעט\יעקובוביץ דינה\finalProject\FinalProject\testServer\BL\bin\Debug\EPPlus.xml
+D:\r&d\testServer\BL\bin\Debug\BL.dll.config
+D:\r&d\testServer\BL\bin\Debug\BL.dll
+D:\r&d\testServer\BL\bin\Debug\BL.pdb
+D:\r&d\testServer\BL\bin\Debug\DAL.dll
+D:\r&d\testServer\BL\bin\Debug\DocumentFormat.OpenXml.dll
+D:\r&d\testServer\BL\bin\Debug\DTO.dll
+D:\r&d\testServer\BL\bin\Debug\EntityFramework.dll
+D:\r&d\testServer\BL\bin\Debug\EntityFramework.SqlServer.dll
+D:\r&d\testServer\BL\bin\Debug\EPPlus.dll
+D:\r&d\testServer\BL\bin\Debug\System.IO.FileSystem.Primitives.dll
+D:\r&d\testServer\BL\bin\Debug\System.IO.Packaging.dll
+D:\r&d\testServer\BL\bin\Debug\DAL.pdb
+D:\r&d\testServer\BL\bin\Debug\DAL.dll.config
+D:\r&d\testServer\BL\bin\Debug\DTO.pdb
+D:\r&d\testServer\BL\bin\Debug\DTO.dll.config
+D:\r&d\testServer\BL\bin\Debug\DocumentFormat.OpenXml.xml
+D:\r&d\testServer\BL\bin\Debug\EntityFramework.xml
+D:\r&d\testServer\BL\bin\Debug\EntityFramework.SqlServer.xml
+D:\r&d\testServer\BL\bin\Debug\EPPlus.xml
+D:\r&d\testServer\BL\obj\Debug\BL.csprojAssemblyReference.cache
+D:\r&d\testServer\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+D:\r&d\testServer\BL\obj\Debug\BL.csproj.CopyComplete
+D:\r&d\testServer\BL\obj\Debug\BL.dll
+D:\r&d\testServer\BL\obj\Debug\BL.pdb
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\obj\Debug\BL.csprojAssemblyReference.cache
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\obj\Debug\BL.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\obj\Debug\BL.pdb
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\BL.dll.config
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\BL.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\BL.pdb
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\DAL.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\DTO.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\EntityFramework.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\EPPlus.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\System.IO.Packaging.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\DAL.pdb
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\DAL.dll.config
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\DTO.pdb
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\DTO.dll.config
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\EntityFramework.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\EPPlus.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\obj\Debug\BL.csproj.CopyComplete

@@ -1,0 +1,19 @@
+<form>
+  <div>
+      <p>fgfdgd</p>
+      <p>fgfdgd</p>
+      <p>fgfdgd</p>
+      <p>fgfdgd</p>
+      <p>fgfdgd</p>
+    <input type="text" #className name="className" placeholder="הכנס שם כיתה" [(ngModel)]="class.class_name">
+  </div>
+<div>
+  <label>
+    הכנס רמת כיתה
+  </label>
+  <input type="number" name="level" [(ngModel)]="class.level">
+</div>
+<div>
+  <input type="button" value="הוסף" (click)="addClass()">
+</div>
+</form>

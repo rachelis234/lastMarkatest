@@ -1,0 +1,24 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- questions Column -->
+    <ng-container matColumnDef="questions">
+      <th mat-header-cell *matHeaderCellDef> questions </th>
+      <td mat-cell *matCellDef="let element; index as i" ><button (click)="onSelectedQuestion(i)" [style.background-color]="selectedRow==i ? 'currColor':'blue'"> {{element.questions.question_text}}{{i}}</button> </td>
+    </ng-container>
+  
+    <!-- answers Column -->
+    <ng-container matColumnDef="answers">
+      <th mat-header-cell *matHeaderCellDef> answers </th>
+      <td mat-cell *matCellDef="let element" ><button (click)="onSelectedAnswer(element.answers)"> {{element.answers.answer_text}}</button> </td>
+    </ng-container>
+  
+    
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  
