@@ -1,33 +1,69 @@
 .example-radio-group {
-    display: flex;
-    flex-direction: column;
-    margin: 15px 0;
-  }
-  
-  .example-radio-button {
-    margin: 5px;
-  }
-  ::ng-deep .mat-radio-outer-circle .mat-radio-checked .mat-radio-button.mat-accent{
-    
-          border-color: #09ba32!important;
-       
-    }
-    
-    ::ng-deep .mat-radio-inner-circle {
-        background-color: #09ba32!important;
-    }
-    
-    ::ng-deep .mat-radio-ripple .mat-ripple-element {
-        background-color: rgba(#09ba32, 0.26)!important;
-    }
-  
-  ::ng-deep .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {     
-    background-color: #09ba32 !important;/*click effect color change*/
-} 
-  ::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
-        background-color: #09ba32!important;  /*inner circle color change*/ 
-  }
+  display: flex;
+  /* flex-direction: column; */
+  margin: 15px 0;
+  margin-left: 57vh;
+}
 
-  ::ng-deep.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
-       border-color:#09ba32!important; /*outer ring color change*/
-  }
+.example-radio-button {
+  margin: 5px;
+}
+::ng-deep
+  .mat-radio-outer-circle
+  .mat-radio-checked
+  .mat-radio-button.mat-accent {
+  border-color: #16a085 !important;
+}
+
+::ng-deep .mat-radio-inner-circle {
+  background-color: #16a085 !important;
+}
+
+::ng-deep .mat-radio-ripple .mat-ripple-element {
+  background-color: rgba(#16a085, 0.26) !important;
+}
+
+::ng-deep .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+  background-color: #16a085 !important; /*click effect color change*/
+}
+::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background-color: #16a085 !important; /*inner circle color change*/
+}
+
+::ng-deep.mat-radio-button.mat-accent.mat-radio-checked
+  .mat-radio-outer-circle {
+  border-color: #16a085 !important; /*outer ring color change*/
+}
+.example-form {
+  text-align: center;
+  color: #16a085;
+}
+.buttondemoBasicUsage section {
+  border-radius: 3px;
+  text-align: center;
+  margin: 1em;
+  position: relative !important;
+}
+
+.buttondemoBasicUsage section .md-button {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.buttondemoBasicUsage .label {
+  position: absolute;
+  bottom: 5px;
+  left: 7px;
+  font-size: 14px;
+  opacity: 0.54;
+}
+.addb {
+  color: #16a085;
+}
+.inpt {
+  color: #16a085;
+}
+.download {
+  width: 50px;
+  height: 50px;
+}
