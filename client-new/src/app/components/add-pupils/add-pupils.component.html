@@ -1,59 +1,109 @@
-<form class="example-form">
-    <div>
-            <p>fgfdgd</p>
-            <p>fgfdgd</p>
-            <p>fgfdgd</p>
-            <p>fgfdgd</p>
-            <p>fgfdgd</p>
-            <mat-form-field class="example-full-width" required>
-                <input type="text" name="studentName" placeholder="Name" matInput [(ngModel)]="student.user.user_name">
-              </mat-form-field>
-    </div>
-    <div>
-        <mat-form-field class="example-full-width">
-            <input matInput placeholder="Email" [formControl]="emailFormControl" name="studentEmail" [(ngModel)]="student.user.user_mail"
-                   [errorStateMatcher]="matcher">
-            <mat-hint>Errors appear instantly!</mat-hint>
-            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-              Please enter a valid email address
-            </mat-error>
-            <mat-error *ngIf="emailFormControl.hasError('required')">
-              Email is <strong>required</strong>
-            </mat-error>
-          </mat-form-field>
-        <!-- <input type="email" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email"
+<form class="example-form" role="form" [formGroup]="myForm" #form (ngSubmit)="addPupil()">
+  <div>
+    <p>fgfdgd</p>
+    <p>fgfdgd</p>
+    <h3>Add a new student</h3>
+    <mat-form-field class="example-full-width" required class="inpt">
+      <div class="form-group">
+      <input
+        class="inpt"
+        type="text"
+        name="studentName"
+        formControlName="myForm.controls['nameControl']"
+        placeholder="Name"
+        matInput
+        [(ngModel)]="student.user.user_name"
+      /></div>
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <mat-form-field class="example-full-width" class="inpt">
+      <input
+        class="inpt"
+        matInput
+        placeholder="Email"
+        formControlName="myForm.controls['emailFormControl']"
+        name="studentEmail"
+        [(ngModel)]="student.user.user_mail"
+        [errorStateMatcher]="matcher"
+      />
+      <mat-hint>Errors appear instantly!</mat-hint>
+      <mat-error
+        *ngIf="
+          myForm.controls['emailFormControl'].hasError('email') &&
+          !myForm.controls['emailFormControl'].hasError('required')
+        "
+      >
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="myForm.controls['emailFormControl'].hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <!-- <input type="email" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email"
             name="studentEmail" [(ngModel)]="student.user.user_mail"> -->
-    </div>
-    <div>
-        <mat-form-field>
-            <input type="password" required matInput placeholder="Password" name="studentPass" [(ngModel)]="student.user.user_password">
-          </mat-form-field>
-    </div>
-    <div>
-        <mat-form-field>
-            <input type="text" required placeholder="IdNumber" name="studentIdNum"
-            [(ngModel)]="student.user.user_id_number" matInput>
-          </mat-form-field>
-    </div>
-    <div>
-            <mat-form-field>
-                    <mat-label>Class</mat-label>
-                    <mat-select name="classId" #classId [(ngModel)]="student.class_id" [formControl]="classControl" required>
-                      <mat-option>--</mat-option>
-                      <mat-option *ngFor="let cls of userService.classesForTeacher" [value]="cls.class_id">
-                        {{cls.class_name}}
-                      </mat-option>
-                    </mat-select>
-                    <mat-error *ngIf="classControl.hasError('required')">This field is required</mat-error>
-                    <mat-hint>{{classControl.value?.sound}}</mat-hint>
-                  </mat-form-field>
-        <!-- <select name="classId" #classId [(ngModel)]="student.class_id">
+  </div>
+  <div class="form-group">
+    <mat-form-field class="inpt">
+      <input
+        class="inpt"
+        type="password"
+        formControlName="myForm.controls['passwordControl']"
+        required
+        matInput
+        placeholder="Password"
+        name="studentPass"
+        [(ngModel)]="student.user.user_password"
+      />
+    </mat-form-field>
+  </div>
+
+  <div class="example-container" class="form-group">
+    <mat-form-field hintLabel="Max 9 characters" class="inpt">
+      <input
+        class="inpt"
+        required
+        matInput
+        #input
+        formControlName="myForm.controls['identityControl']"
+        maxlength="9"
+        placeholder="Identity"
+        name="studentIdNum"
+        [(ngModel)]="student.user.user_id_number"
+      />
+      <mat-hint align="end">{{ input.value?.length || 0 }}/10</mat-hint>
+    </mat-form-field>
+  </div>
+  <!-- <div>
+    <mat-form-field>
+      <mat-label>Class</mat-label>
+      <mat-select
+        name="classId"
+        #classId
+        [(ngModel)]="student.class_id"
+        [formControl]="classControl"
+        required
+      >
+        <mat-option>--</mat-option>
+        <mat-option
+          *ngFor="let cls of userService.classesForTeacher"
+          [value]="cls.class_id"
+        >
+          {{ cls.class_name }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="classControl.hasError('required')"
+        >This field is required</mat-error
+      >
+      <mat-hint>{{ classControl.value?.sound }}</mat-hint>
+    </mat-form-field> </div> -->
+  <!-- <select name="classId" #classId [(ngModel)]="student.class_id">
             <option *ngFor="let cls of userService.classesForTeacher" [value]="cls.class_id">
                 {{cls.class_name}}
             </option>
         </select> -->
-    </div>
-    <!-- <div>
+
+  <!-- <div>
         <h4>mat-select</h4>
         <mat-form-field>
             <mat-label>Class</mat-label>
@@ -63,32 +113,74 @@
             </mat-select>
         </mat-form-field>
     </div> -->
-    <div>
-            <label id="example-radio-group-label">Extra time:</label>
-            <mat-radio-group
-              aria-labelledby="example-radio-group-label"
-              class="example-radio-group"
-              [(ngModel)]="student.extra_time" name="extraTime" >
-              <mat-radio-button class="example-radio-button" [value]="true">
-                Yes
-              </mat-radio-button>
-              <mat-radio-button class="example-radio-button" [value]="false">
-                   No
-                  </mat-radio-button>
-            </mat-radio-group>
-        <!-- <input type="radio" name="extraTime" value="true" [(ngModel)]="student.extra_time">כן
+  <div>
+    <label id="example-radio-group-label">Extra time:</label>
+    <mat-radio-group
+      aria-labelledby="example-radio-group-label"
+      class="example-radio-group"
+      [(ngModel)]="student.extra_time"
+      name="extraTime"
+    >
+      <mat-radio-button class="example-radio-button" [value]="true">
+        Yes
+      </mat-radio-button>
+      <mat-radio-button class="example-radio-button" [value]="false">
+        No
+      </mat-radio-button>
+    </mat-radio-group>
+    <!-- <input type="radio" name="extraTime" value="true" [(ngModel)]="student.extra_time">כן
         <input type="radio" name="extraTime" value="false" [(ngModel)]="student.extra_time">לא -->
-    </div>
-    <input type="button" value="הוסף" (click)="addPupil()">
+  </div>
+  <button
+    type="submit"
+    [disabled]="!myForm.invalid"
+    class="addb"
+    mat-raised-button
+    color="#16A085"
+  >
+    Add
+  </button>
+  <!-- <svg width="270" height="135">
+      <a>
+        <rect
+          x="50"
+          y="20"
+          rx="50"
+          ry="50"
+          width="200"
+          height="100"
+          style="fill:#16A085  ;stroke:#16A085;stroke-width:0"
+        />
+      </a>
+    </svg> -->
 </form>
-<button (click)="download()">הורדה</button>
-<input type="file" accept=".xlsx" #file value="להוספת רשימת תלמידים מקובץ" (change)="handleFileInput($event.target.files)">
+<button class="download" (click)="download()">
+  <img src="../../icons/download3.jpg" />
+</button>
+<input
+  type="file"
+  accept=".xlsx"
+  #file
+  value="להוספת רשימת תלמידים מקובץ"
+  (change)="handleFileInput($event.target.files)"
+/>
 <!-- <mat-file-upload-queue #fileUploadQueue [fileAlias]="'file'" [httpUrl]="'http://localhost:4200/api/read-excel/test'">
     <mat-file-upload [file]="file" [id]="i" *ngFor="let file of fileUploadQueue.files; let i = index"></mat-file-upload>
 </mat-file-upload-queue> -->
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+You can also include the stylesheet separately if desired:
+
+<script src="sweetalert2.min.js"></script>
+<!-- <link rel="stylesheet" href="sweetalert2.min.css" /> -->
 <!------ Include the above in your HEAD tag ---------->
 
 <!-- <div class="container">
@@ -120,4 +212,8 @@
       </div>
     </div>
 </div> -->
-<input type="button" value="הוסף רשימת תלמידים" (click)="uploadFileToActivity()">
+<input
+  type="button"
+  value="הוסף רשימת תלמידים"
+  (click)="uploadFileToActivity()"
+/>

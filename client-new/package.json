@@ -39,7 +39,7 @@
     "primeng": "^8.0.3",
     "primeng-schematics": "^7.1.22",
     "rxjs": "~6.4.0",
-    "sweetalert2": "^8.15.2",
+    "sweetalert2": "^8.19.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
