@@ -1,12 +1,12 @@
 <div width="100px" height="100px" bacground-color="red">
-  <router-outlet> </router-outlet>
+  <router-outlet class="container"> </router-outlet>
 </div>
 <div width="100px" height="100px" bacground-color="red"></div>
 <!-- <mat-form-field class="example-full-width">
     <input matInput placeholder="Favorite food" value="Sushi">
   </mat-form-field> -->
 <app-waiting *ngIf="userService.showSpinner"></app-waiting>
-<form class="example-form">
+<!-- <form class="example-form">
   <mat-form-field class="example-full-width">
     <input matInput placeholder="Favorite food" value="Sushi">
   </mat-form-field>
@@ -14,6 +14,6 @@
   <mat-form-field class="example-full-width">
     <textarea matInput placeholder="Leave a comment"></textarea>
   </mat-form-field>
-</form>
+</form> -->
 <!-- <app-student-chart></app-student-chart> -->
 

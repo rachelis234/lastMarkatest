@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="20a68aae5d2648a1a9c2228b528705a3" Name="Diagram1">
+      <Diagram DiagramId="606ea9d4f44c4ec4918155d5c49cacf9" Name="Diagram1">
         <EntityTypeShape EntityType="rdTestsModel.answer" Width="1.5" PointX="12" PointY="8" IsExpanded="true" />
         <EntityTypeShape EntityType="rdTestsModel.category" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
         <EntityTypeShape EntityType="rdTestsModel.class" Width="1.5" PointX="5.25" PointY="10.875" IsExpanded="true" />
@@ -13,7 +13,6 @@
         <EntityTypeShape EntityType="rdTestsModel.student" Width="1.5" PointX="7.5" PointY="11.375" IsExpanded="true" />
         <EntityTypeShape EntityType="rdTestsModel.student_answer" Width="1.5" PointX="14.25" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="rdTestsModel.sub_category" Width="1.5" PointX="7.5" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="rdTestsModel.sysdiagram" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="rdTestsModel.teacher" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
         <EntityTypeShape EntityType="rdTestsModel.test" Width="1.5" PointX="12" PointY="10.875" IsExpanded="true" />
         <EntityTypeShape EntityType="rdTestsModel.type" Width="1.5" PointX="7.5" PointY="5.25" IsExpanded="true" />

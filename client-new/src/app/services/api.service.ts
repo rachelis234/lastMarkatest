@@ -65,10 +65,10 @@ export class ApiService implements OnInit {
     return this.httpService.get(environment.api + '/SubCategory/getSubCategoriesForCategory?categoryId=' + categoryId);
   }
   createSimpleTest(test: SimpleTest) {
-    return this.httpService.post(environment.api + '/Test/addTest', test);
+    return this.httpService.post(environment.api + '/Test/addSimpleTest', test);
   }
   createGeneratedTest(test: GeneratedTest) {
-    return this.httpService.post(environment.api + '/Test/addTest', test);
+    return this.httpService.post(environment.api + '/Test/addGeneratedTest', test);
   }
   forgotPassword(emailAddress: string) {
     return this.httpService.get(environment.api + '/User/forgotPassword?emailAddress=' + emailAddress);

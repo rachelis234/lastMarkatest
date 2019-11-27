@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="rdTestsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="rdTestsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="answer">
     <Key>
       <PropertyRef Name="answer_id" />
@@ -25,8 +25,6 @@
     <Property Name="class_name" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="teacher_id" Type="int" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'r&dTests.dbo.classTest' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="classTest">
     <Key>
       <PropertyRef Name="class_id" />
@@ -88,16 +86,6 @@ warning 6002: The table/view 'r&dTests.dbo.sub_category_test' does not have a pr
     <Property Name="test_id" Type="int" Nullable="false" />
     <Property Name="sub_category_id" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
   <EntityType Name="teacher">
     <Key>
       <PropertyRef Name="teacher_id" />
@@ -118,8 +106,6 @@ warning 6002: The table/view 'r&dTests.dbo.sub_category_test' does not have a pr
     <Property Name="level" Type="int" Nullable="false" />
     <Property Name="quesPercent" Type="float" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="test_question">
     <Key>
       <PropertyRef Name="question_id" />
@@ -146,7 +132,7 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
     <Property Name="user_mail" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="status" Type="int" Nullable="false" />
   </EntityType>
-  <Association Name="FK__classTest__class__2DB1C7EE">
+  <Association Name="FK__classTest__class__534D60F1">
     <End Role="class" Type="Self.class" Multiplicity="1" />
     <End Role="classTest" Type="Self.classTest" Multiplicity="*" />
     <ReferentialConstraint>
@@ -354,35 +340,24 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
     <EntitySet Name="answer" EntityType="Self.answer" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="category" EntityType="Self.category" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="class" EntityType="Self.class" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="classTest" EntityType="Self.classTest" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="design" EntityType="Self.design" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="question" EntityType="Self.question" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="student" EntityType="Self.student" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="student_answer" EntityType="Self.student_answer" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sub_category" EntityType="Self.sub_category" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="teacher" EntityType="Self.teacher" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="test" EntityType="Self.test" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="test_question" EntityType="Self.test_question" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="type" EntityType="Self.type" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="classTest" EntityType="Self.classTest" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [classTest].[class_id] AS [class_id], 
-    [classTest].[test_id] AS [test_id]
-    FROM [dbo].[classTest] AS [classTest]</DefiningQuery>
-    </EntitySet>
     <EntitySet Name="sub_category_test" EntityType="Self.sub_category_test" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [sub_category_test].[test_id] AS [test_id], 
     [sub_category_test].[sub_category_id] AS [sub_category_id]
     FROM [dbo].[sub_category_test] AS [sub_category_test]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="test_question" EntityType="Self.test_question" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [test_question].[question_id] AS [question_id], 
-    [test_question].[test_id] AS [test_id]
-    FROM [dbo].[test_question] AS [test_question]</DefiningQuery>
-    </EntitySet>
-    <AssociationSet Name="FK__classTest__class__2DB1C7EE" Association="Self.FK__classTest__class__2DB1C7EE">
+    <AssociationSet Name="FK__classTest__class__534D60F1" Association="Self.FK__classTest__class__534D60F1">
       <End Role="class" EntitySet="class" />
       <End Role="classTest" EntitySet="classTest" />
     </AssociationSet>

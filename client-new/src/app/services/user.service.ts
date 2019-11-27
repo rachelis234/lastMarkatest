@@ -16,7 +16,7 @@ export class UserService {
   categoriesForTeacher:Category[];
   classesForTeacher:Class[];
   testsForTeacher:Test[];
-  questionsForTeacher:Array<Question[]>;
+  questionsForTeacher:Array<Question>=new Array<Question>();
   showSpinner:boolean=false;
   solveTest:SolveTest;
   

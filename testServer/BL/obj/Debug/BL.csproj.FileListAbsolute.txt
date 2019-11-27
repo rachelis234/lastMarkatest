@@ -82,10 +82,6 @@ D:\r&d\testServer\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
 D:\r&d\testServer\BL\obj\Debug\BL.csproj.CopyComplete
 D:\r&d\testServer\BL\obj\Debug\BL.dll
 D:\r&d\testServer\BL\obj\Debug\BL.pdb
-C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\obj\Debug\BL.csprojAssemblyReference.cache
-C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
-C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\obj\Debug\BL.dll
-C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\obj\Debug\BL.pdb
 C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\BL.dll.config
 C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\BL.dll
 C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\BL.pdb
@@ -100,8 +96,11 @@ C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\
 C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\DAL.dll.config
 C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\DTO.pdb
 C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\DTO.dll.config
-C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\EntityFramework.xml
 C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\bin\Debug\EPPlus.xml
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\obj\Debug\BL.csprojAssemblyReference.cache
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
 C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\obj\Debug\BL.csproj.CopyComplete
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\obj\Debug\BL.dll
+C:\Users\USER\Desktop\dinaProject\final project\project\testServer\BL\obj\Debug\BL.pdb

@@ -87,16 +87,6 @@
     <NavigationProperty Name="questions" Relationship="Self.FK_question_sub_category" FromRole="sub_category" ToRole="question" />
     <NavigationProperty Name="tests" Relationship="Self.sub_category_test" FromRole="sub_category" ToRole="test" />
   </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
   <EntityType Name="teacher">
     <Key>
       <PropertyRef Name="teacher_id" />
@@ -297,7 +287,6 @@
     <EntitySet Name="students" EntityType="Self.student" />
     <EntitySet Name="student_answer" EntityType="Self.student_answer" />
     <EntitySet Name="sub_category" EntityType="Self.sub_category" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <EntitySet Name="teachers" EntityType="Self.teacher" />
     <EntitySet Name="tests" EntityType="Self.test" />
     <EntitySet Name="types" EntityType="Self.type" />

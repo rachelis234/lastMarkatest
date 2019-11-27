@@ -33,7 +33,6 @@ namespace DAL
         public virtual DbSet<student> students { get; set; }
         public virtual DbSet<student_answer> student_answer { get; set; }
         public virtual DbSet<sub_category> sub_category { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<teacher> teachers { get; set; }
         public virtual DbSet<test> tests { get; set; }
         public virtual DbSet<type> types { get; set; }
