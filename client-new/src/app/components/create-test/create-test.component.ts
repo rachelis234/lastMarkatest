@@ -24,20 +24,21 @@ import { Question } from 'src/app/Models/Question';
 export class CreateTestComponent implements OnInit {
 
   classes = new FormControl();
+
   questions = new FormControl();
   subCategories = new FormControl();
   //toppingList: string[] = ;
   test: Test = new Test;
   simpleTest: SimpleTest = null;
   generatedTest: GeneratedTest = null;
-  generate: boolean = false;
+  generate: string ;
   myControl = new FormControl();
   options: Category[];
   filteredOptions: Observable<Category[]>;
   selectCategory: boolean = false;
   // selectSubCat: boolean;
   // afterSelectSubCat:boolean;
-  displayedColumns: string[] = ['select', 'name', 'questions'];
+  displayedColumns: string[] = [ 'name', 'questions'];
   dataSource = new MatTableDataSource<Sub_category>(this.apiService.subCategoriesForCat);
   selection = new SelectionModel<Sub_category>(true, []);
   allSelectedQuestions: Question[];
@@ -45,7 +46,6 @@ export class CreateTestComponent implements OnInit {
   }
 
   ngOnInit() {
-
     this.userService.getClassesForTeacher().subscribe(
       (res: Class[]) => {
         this.userService.classesForTeacher = res;
@@ -62,7 +62,12 @@ export class CreateTestComponent implements OnInit {
       (res: WebResult) => {
         if (res.status == true) {
           this.userService.categoriesForTeacher = res.value as Category[];
-          this.options = this.userService.categoriesForTeacher;
+          this.options = this.userService.categoriesForTeacher; 
+          this.filteredOptions = this.myControl.valueChanges
+      .pipe(
+        startWith(''),
+        map(value => this._filter(value))
+      );
         }
       },
       (err) => console.log(err)
@@ -75,8 +80,11 @@ export class CreateTestComponent implements OnInit {
 
   }
   createTest() {
-    if (this.generate == true) {
+
+    if (this.generate == 'true') {
       this.generatedTest.classes = this.classes.value;
+      this.generatedTest.subCategories=this.subCategories.value;
+      this.generatedTest.test.teacherId=this.userService.user.teacherId;
       this.apiService.createGeneratedTest(this.generatedTest).subscribe(
         (res: Test) => {
           this.userService.testsForTeacher.push(res);
@@ -86,9 +94,9 @@ export class CreateTestComponent implements OnInit {
       );
     }
     else {
-      debugger
       this.simpleTest.classes = this.classes.value;
-      this.simpleTest.questions = this.questions.value;
+      this.simpleTest.test.teacherId=this.userService.user.teacherId;
+    //  this.simpleTest.questions = this.questions.value;
       this.apiService.createSimpleTest(this.simpleTest).subscribe(
         (res: Test) => {
           this.userService.testsForTeacher.push(res);
@@ -99,7 +107,7 @@ export class CreateTestComponent implements OnInit {
     }
   }
   onSelectionChange() {
-    if (this.generate == true) {
+    if (this.generate == 'true') {
       this.generatedTest = new GeneratedTest();
       this.generatedTest.test = this.test;
     }
@@ -118,11 +126,16 @@ export class CreateTestComponent implements OnInit {
           this.userService.getQuestionsForTeacher().subscribe(
             (res: WebResult) => {
               if (res.status == true) {
-                debugger
                 var c: any;
-                for (c in this.apiService.subCategoriesForCat) {
-                  this.userService.questionsForTeacher.push((res.value as Question[]).filter(q => q.sub_category_id == c.sub_category_id));
-                }
+                // for (c in this.apiService.subCategoriesForCat) {
+                //   this.userService.questionsForTeacher.push((res.value as Question[]).filter(q => q.sub_category_id == c.sub_category_id));
+                // }
+                this.userService.questionsForTeacher=[];
+                // @ts-ignore
+                res['value'].forEach(v=>{
+                  if(this.apiService.subCategoriesForCat.find(c=>c.sub_category_id==v.sub_category_id))
+                this.userService.questionsForTeacher.push(v);
+                });
                 //this.userService.questionsForTeacher=res.value as Question[];
                 console.log(this.userService.questionsForTeacher);
               }
@@ -136,7 +149,6 @@ export class CreateTestComponent implements OnInit {
     );
   }
   onchangeInput() {
-    debugger;
     this.selectCategory = false;
 
   }
@@ -170,6 +182,7 @@ export class CreateTestComponent implements OnInit {
 
   /** Selects all rows if they are not all selected; otherwise clear selection. */
   masterToggle() {
+    debugger
     this.isAllSelected() ?
       this.selection.clear() :
       this.dataSource.data.forEach(row => this.selection.select(row));
@@ -177,6 +190,7 @@ export class CreateTestComponent implements OnInit {
 
   /** The label for the checkbox on the passed row */
   checkboxLabel(row?: Sub_category): string {
+    
     if (!row) {
       return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
     }
@@ -191,10 +205,28 @@ export class CreateTestComponent implements OnInit {
     console.log(this.selection);
   }
   onClickSelect(row: Sub_category, event: Event) {
+    debugger
     console.log(event);
   }
   onSelectQuestion(event: Event) {
+     //@ts-ignore
+
+    if(event.source.selected)
+    {
+     //@ts-ignore
+      this.simpleTest.questions.push(event.source.value)
+    }  
+    else {
+     //@ts-ignore
+       var index=this.simpleTest.questions.indexOf(event.source.value);
+       this.simpleTest.questions.splice(index,1);
+       debugger
+    }
+      
     console.log(event);
     //this.allSelectedQuestions.push(event.)
+  }
+  questionByCategory(subCategoryId){
+return this.userService.questionsForTeacher.filter(q=>q.sub_category_id==subCategoryId&&q.level==this.test.level);
   }
 }

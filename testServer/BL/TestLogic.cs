@@ -3,6 +3,7 @@ using DAL;
 using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -78,7 +79,7 @@ namespace BL
 			}
 		}
 
-		public static SolveTest GetTest(int studentId, long time)
+		public static SolveTest GetTest(int studentId, DateTime time)
 		{
 			using (Entities e = new Entities())
 			{
@@ -88,21 +89,30 @@ namespace BL
 					test testDal = new test();
 
 
+                    var student = e.students.FirstOrDefault(s => s.userId == studentId);
+                    if (student != null)
+                    {
+                        var teacherId = student.@class.teacher_id;
+                        var test = e.tests.FirstOrDefault(t => t.teacherId == teacherId
+                           && t.test_date == time.Date && t.test_start_time < time.TimeOfDay && t.test_end_time > time.TimeOfDay);
+                        var TTT = e.tests.ToList(); 
+                        if (test != null)
+                        {
+                                sTest.test = TestCasting.TestToDTO(test);
 
-					sTest.test = TestCasting.TestToDTO(testDal = e.tests.FirstOrDefault(t => t.sub_category.FirstOrDefault().category.teacher_id == e.students.FirstOrDefault(s => s.userId == studentId).@class.teacher_id));
+                                sTest.questions = QuestionCasting.QuestionsToDTO((test.questions).ToList());
+                            var x = e.answers.ToList();
+                            var questionsIds = sTest.questions.Select(t => t.question_id).ToList();
+                            var y = x.Where(a => questionsIds.Contains(a.question_id)).ToList();
+                            sTest.answers = AnswerCasting.AnswersToDTO(y);
+                            return sTest;
+                        }
+                        throw new Exception("no test0");
+                    }
+                    throw new Exception("no student");
 
-					if (sTest.test != null)
-					{
-						sTest.questions = QuestionCasting.QuestionsToDTO((testDal.questions).ToList());
-						var x = e.answers.ToList();
-
-						var y = x.Where(a => (sTest.questions.FirstOrDefault(q => q.question_id == a.question_id)) != null).ToList();
-						sTest.answers = AnswerCasting.AnswersToDTO(y);
-						return sTest;
-					}
-					throw new Exception("no test0");
-				}
-				catch (Exception ex)
+                }
+                catch (Exception ex)
 				{
 
 					throw ex;
@@ -120,15 +130,32 @@ namespace BL
 				{
 					//add new test
 					test t = e.tests.Add(TestCasting.TestToDAL(newtest.test));
+                    e.SaveChanges();
 					//add rand questions to the new test
 					List<question> newQuesList = RandQues(t.test_id, t.level, newtest.american,
 						newtest.yesNo, newtest.match, newtest.classes.FirstOrDefault().teacher_id, newtest.subCategories);
-					e.tests.Last().classes = ClassCasting.ClassesToDAL(newtest.classes);
-					e.tests.Last().questions.AddRange(newQuesList);
+					t.classes.AddRange( ClassCasting.ClassesToDAL(newtest.classes));
+                    newQuesList.ForEach(q =>
+                    {
+                        question qq = new question()
+                        {
+                            question_level = q.question_level,
+                            question_id = q.question_id,
+                            question_text = q.question_text,
+                           //// answers = q.answers,
+                           // sub_category = q.sub_category,
+                            sub_category_id = q.sub_category_id,
+                           // tests = q.tests,
+                           // type = q.type,
+                            type_id = q.type_id
+                        };
+                        t.questions.Add(qq);
+                    });
+					//t.questions.AddRange(newQuesList.ToList());
 
 					wb.status = true;
 					wb.message = "succeed";
-					wb.value = TestCasting.TestToDTO(e.tests.Last());
+					wb.value = TestCasting.TestToDTO(t);
 					e.SaveChanges();
 					return wb;
 
@@ -150,15 +177,15 @@ namespace BL
 				try
 				{
 					//add new test
-					e.tests.Add(TestCasting.TestToDAL(newtest.test));
-					//add classes o the new test
-					e.tests.Last().classes.AddRange(ClassCasting.ClassesToDAL(newtest.classes));
-					//add questions to the new test
-					e.tests.Last().questions.AddRange(QuestionCasting.QuestionsToDAL(newtest.questions));
+					var t=e.tests.Add(TestCasting.TestToDAL(newtest.test));
+                    //add classes o the new test
+                    t.classes=ClassCasting.ClassesToDAL(newtest.classes);
+                    //add questions to the new test
+                    t.questions=QuestionCasting.QuestionsToDAL(newtest.questions);
 					wb.status = true;
 					wb.message = "succeed";
-					wb.value = TestCasting.TestToDTO(e.tests.Last());
-					e.SaveChanges();
+					wb.value = TestCasting.TestToDTO(t);
+                    e.SaveChanges();
 					return wb;
 				}
 				catch (Exception ex)
@@ -175,16 +202,19 @@ namespace BL
 		{
 			using (Entities e = new Entities())
 			{
+                var subCategoriesIds = subCategories.Select(s => s.sub_category_id).ToList();
+            
 
-				List<question> quesList1 = e.questions
+
+                List <question> quesList1 = e.questions
 					.Where(q => q.question_level == level && q.sub_category.category.teacher_id == teacher_id
-					&& q.type_id == 1 && (subCategories.FirstOrDefault(s => s.sub_category_id == q.sub_category_id)) != null).ToList();
+					&& q.type_id == 1 && subCategoriesIds.Contains(q.sub_category_id)).ToList();
 				List<question> quesList2 = e.questions
 					.Where(q => q.question_level == level && q.sub_category.category.teacher_id == teacher_id 
-					&& q.type_id == 2 && (subCategories.FirstOrDefault(s => s.sub_category_id == q.sub_category_id)) != null).ToList();
+					&& q.type_id == 2 && subCategoriesIds.Contains(q.sub_category_id)).ToList();
 				List<question> quesList3 = e.questions
 					.Where(q => q.question_level == level && q.sub_category.category.teacher_id == teacher_id 
-					&& q.type_id == 3 && (subCategories.FirstOrDefault(s => s.sub_category_id == q.sub_category_id)) != null).ToList();
+					&& q.type_id == 3 && subCategoriesIds.Contains(q.sub_category_id)).ToList();
 				List<question> newListQues = new List<question>();
 
 				AddQues(american, quesList1, newListQues);
@@ -201,6 +231,8 @@ namespace BL
 			int count;
 			int index;
 			Random r = new Random();
+            if (indexer > quesList.Count)
+                indexer = quesList.Count;
 			for (int i = 0; i < indexer; i++)
 			{
 				count = quesList.Count();

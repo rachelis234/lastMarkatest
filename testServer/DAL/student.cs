@@ -17,7 +17,7 @@ namespace DAL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public student()
         {
-            this.student_answer = new HashSet<student_answer>();
+            this.students_mark = new HashSet<students_mark>();
         }
     
         public int student_id { get; set; }
@@ -26,8 +26,8 @@ namespace DAL
         public int userId { get; set; }
     
         public virtual @class @class { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<student_answer> student_answer { get; set; }
         public virtual user user { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<students_mark> students_mark { get; set; }
     }
 }

@@ -17,6 +17,7 @@ namespace BL.Casting
                     answer_id = ans.answer_id,
                     answer_text = ans.answer_text,
                     question_id = ans.question_id,
+                    isCorrect=ans.isCorrect
                     //question = e.questions.First(q => q.question_id == ans.question_id),
                     //student_answer = e.student_answer.Where(sa => sa.ans_id == ans.answer_id).ToList()
                 };
@@ -28,6 +29,7 @@ namespace BL.Casting
                   answer_id = ans.answer_id,
                   answer_text = ans.answer_text,
                   question_id = ans.question_id,
+                  isCorrect=ans.isCorrect
                   
               };   
         }

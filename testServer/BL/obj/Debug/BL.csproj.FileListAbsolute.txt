@@ -119,7 +119,6 @@ C:\Users\User\Desktop\testProjet\lastMarkatest\testServer\BL\bin\Debug\DAL.pdb
 C:\Users\User\Desktop\testProjet\lastMarkatest\testServer\BL\bin\Debug\DAL.dll.config
 C:\Users\User\Desktop\testProjet\lastMarkatest\testServer\BL\bin\Debug\DTO.pdb
 C:\Users\User\Desktop\testProjet\lastMarkatest\testServer\BL\bin\Debug\DTO.dll.config
-C:\Users\User\Desktop\testProjet\lastMarkatest\testServer\BL\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Users\User\Desktop\testProjet\lastMarkatest\testServer\BL\bin\Debug\EntityFramework.xml
 C:\Users\User\Desktop\testProjet\lastMarkatest\testServer\BL\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\User\Desktop\testProjet\lastMarkatest\testServer\BL\bin\Debug\EPPlus.xml

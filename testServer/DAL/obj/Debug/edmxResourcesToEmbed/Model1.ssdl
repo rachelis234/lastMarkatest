@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="rdTestsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="rdTestsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="answer">
     <Key>
       <PropertyRef Name="answer_id" />
@@ -25,8 +25,6 @@
     <Property Name="class_name" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="teacher_id" Type="int" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'r&dTests.dbo.classTest' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="classTest">
     <Key>
       <PropertyRef Name="class_id" />
@@ -61,14 +59,14 @@ warning 6002: The table/view 'r&dTests.dbo.classTest' does not have a primary ke
     <Property Name="extra_time" Type="bit" Nullable="false" />
     <Property Name="userId" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="student_answer">
+  <EntityType Name="students_mark">
     <Key>
-      <PropertyRef Name="student_answer_id" />
+      <PropertyRef Name="student_id" />
+      <PropertyRef Name="test_id" />
     </Key>
-    <Property Name="student_answer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="student_id" Type="int" Nullable="false" />
-    <Property Name="question_test_id" Type="int" Nullable="false" />
-    <Property Name="ans_id" Type="int" Nullable="false" />
+    <Property Name="test_id" Type="int" Nullable="false" />
+    <Property Name="mark" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="sub_category">
     <Key>
@@ -87,16 +85,6 @@ warning 6002: The table/view 'r&dTests.dbo.sub_category_test' does not have a pr
     </Key>
     <Property Name="test_id" Type="int" Nullable="false" />
     <Property Name="sub_category_id" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="teacher">
     <Key>
@@ -117,9 +105,8 @@ warning 6002: The table/view 'r&dTests.dbo.sub_category_test' does not have a pr
     <Property Name="over_mark" Type="float" Nullable="false" />
     <Property Name="level" Type="int" Nullable="false" />
     <Property Name="quesPercent" Type="float" />
+    <Property Name="teacherId" Type="int" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="test_question">
     <Key>
       <PropertyRef Name="question_id" />
@@ -146,7 +133,7 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
     <Property Name="user_mail" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="status" Type="int" Nullable="false" />
   </EntityType>
-  <Association Name="FK__classTest__class__2DB1C7EE">
+  <Association Name="FK__classTest__class__3F466844">
     <End Role="class" Type="Self.class" Multiplicity="1" />
     <End Role="classTest" Type="Self.classTest" Multiplicity="*" />
     <ReferentialConstraint>
@@ -170,6 +157,30 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__students___stude__5165187F">
+    <End Role="student" Type="Self.student" Multiplicity="1" />
+    <End Role="students_mark" Type="Self.students_mark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="students_mark">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__students___test___52593CB8">
+    <End Role="test" Type="Self.test" Multiplicity="1" />
+    <End Role="students_mark" Type="Self.students_mark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="test">
+        <PropertyRef Name="test_id" />
+      </Principal>
+      <Dependent Role="students_mark">
+        <PropertyRef Name="test_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK__sub_categ__categ__00200768">
     <End Role="category" Type="Self.category" Multiplicity="1" />
     <End Role="sub_category" Type="Self.sub_category" Multiplicity="*" />
@@ -179,6 +190,18 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
       </Principal>
       <Dependent Role="sub_category">
         <PropertyRef Name="category_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__test__teacherId__4F7CD00D">
+    <End Role="teacher" Type="Self.teacher" Multiplicity="0..1" />
+    <End Role="test" Type="Self.test" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher">
+        <PropertyRef Name="teacher_id" />
+      </Principal>
+      <Dependent Role="test">
+        <PropertyRef Name="teacherId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -239,30 +262,6 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
       </Principal>
       <Dependent Role="question">
         <PropertyRef Name="type_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_student_answer_answer">
-    <End Role="answer" Type="Self.answer" Multiplicity="1" />
-    <End Role="student_answer" Type="Self.student_answer" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="answer">
-        <PropertyRef Name="answer_id" />
-      </Principal>
-      <Dependent Role="student_answer">
-        <PropertyRef Name="ans_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_student_answer_student">
-    <End Role="student" Type="Self.student" Multiplicity="1" />
-    <End Role="student_answer" Type="Self.student_answer" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="student">
-        <PropertyRef Name="student_id" />
-      </Principal>
-      <Dependent Role="student_answer">
-        <PropertyRef Name="student_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -354,35 +353,24 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
     <EntitySet Name="answer" EntityType="Self.answer" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="category" EntityType="Self.category" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="class" EntityType="Self.class" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="classTest" EntityType="Self.classTest" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="design" EntityType="Self.design" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="question" EntityType="Self.question" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="student" EntityType="Self.student" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="student_answer" EntityType="Self.student_answer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="students_mark" EntityType="Self.students_mark" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sub_category" EntityType="Self.sub_category" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="teacher" EntityType="Self.teacher" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="test" EntityType="Self.test" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="test_question" EntityType="Self.test_question" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="type" EntityType="Self.type" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="classTest" EntityType="Self.classTest" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [classTest].[class_id] AS [class_id], 
-    [classTest].[test_id] AS [test_id]
-    FROM [dbo].[classTest] AS [classTest]</DefiningQuery>
-    </EntitySet>
     <EntitySet Name="sub_category_test" EntityType="Self.sub_category_test" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [sub_category_test].[test_id] AS [test_id], 
     [sub_category_test].[sub_category_id] AS [sub_category_id]
     FROM [dbo].[sub_category_test] AS [sub_category_test]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="test_question" EntityType="Self.test_question" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [test_question].[question_id] AS [question_id], 
-    [test_question].[test_id] AS [test_id]
-    FROM [dbo].[test_question] AS [test_question]</DefiningQuery>
-    </EntitySet>
-    <AssociationSet Name="FK__classTest__class__2DB1C7EE" Association="Self.FK__classTest__class__2DB1C7EE">
+    <AssociationSet Name="FK__classTest__class__3F466844" Association="Self.FK__classTest__class__3F466844">
       <End Role="class" EntitySet="class" />
       <End Role="classTest" EntitySet="classTest" />
     </AssociationSet>
@@ -390,9 +378,21 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
       <End Role="test" EntitySet="test" />
       <End Role="classTest" EntitySet="classTest" />
     </AssociationSet>
+    <AssociationSet Name="FK__students___stude__5165187F" Association="Self.FK__students___stude__5165187F">
+      <End Role="student" EntitySet="student" />
+      <End Role="students_mark" EntitySet="students_mark" />
+    </AssociationSet>
+    <AssociationSet Name="FK__students___test___52593CB8" Association="Self.FK__students___test___52593CB8">
+      <End Role="test" EntitySet="test" />
+      <End Role="students_mark" EntitySet="students_mark" />
+    </AssociationSet>
     <AssociationSet Name="FK__sub_categ__categ__00200768" Association="Self.FK__sub_categ__categ__00200768">
       <End Role="category" EntitySet="category" />
       <End Role="sub_category" EntitySet="sub_category" />
+    </AssociationSet>
+    <AssociationSet Name="FK__test__teacherId__4F7CD00D" Association="Self.FK__test__teacherId__4F7CD00D">
+      <End Role="teacher" EntitySet="teacher" />
+      <End Role="test" EntitySet="test" />
     </AssociationSet>
     <AssociationSet Name="FK_answer_question" Association="Self.FK_answer_question">
       <End Role="question" EntitySet="question" />
@@ -413,14 +413,6 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
     <AssociationSet Name="FK_question_type" Association="Self.FK_question_type">
       <End Role="type" EntitySet="type" />
       <End Role="question" EntitySet="question" />
-    </AssociationSet>
-    <AssociationSet Name="FK_student_answer_answer" Association="Self.FK_student_answer_answer">
-      <End Role="answer" EntitySet="answer" />
-      <End Role="student_answer" EntitySet="student_answer" />
-    </AssociationSet>
-    <AssociationSet Name="FK_student_answer_student" Association="Self.FK_student_answer_student">
-      <End Role="student" EntitySet="student" />
-      <End Role="student_answer" EntitySet="student_answer" />
     </AssociationSet>
     <AssociationSet Name="FK_student_class" Association="Self.FK_student_class">
       <End Role="class" EntitySet="class" />

@@ -3,6 +3,7 @@ import { Class } from './Class';
 import { Sub_category } from './Sub_category';
 
 export class GeneratedTest {
+    constructor(){}
     test:Test;
     classes:Class[];
     subCategories:Sub_category[];

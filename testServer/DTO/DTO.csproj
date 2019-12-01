@@ -55,6 +55,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="ClassDTO.cs" />
     <Compile Include="CollectionExtensions.cs" />
+    <Compile Include="student_markDTO.cs" />
     <Compile Include="DesignDTO.cs" />
     <Compile Include="GeneratedTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="rdTestsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="rdTestsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="answer">
           <Key>
             <PropertyRef Name="answer_id" />
@@ -30,8 +30,6 @@
           <Property Name="class_name" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="teacher_id" Type="int" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'r&dTests.dbo.classTest' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="classTest">
           <Key>
             <PropertyRef Name="class_id" />
@@ -66,14 +64,14 @@ warning 6002: The table/view 'r&dTests.dbo.classTest' does not have a primary ke
           <Property Name="extra_time" Type="bit" Nullable="false" />
           <Property Name="userId" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="student_answer">
+        <EntityType Name="students_mark">
           <Key>
-            <PropertyRef Name="student_answer_id" />
+            <PropertyRef Name="student_id" />
+            <PropertyRef Name="test_id" />
           </Key>
-          <Property Name="student_answer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="student_id" Type="int" Nullable="false" />
-          <Property Name="question_test_id" Type="int" Nullable="false" />
-          <Property Name="ans_id" Type="int" Nullable="false" />
+          <Property Name="test_id" Type="int" Nullable="false" />
+          <Property Name="mark" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="sub_category">
           <Key>
@@ -92,16 +90,6 @@ warning 6002: The table/view 'r&dTests.dbo.sub_category_test' does not have a pr
           </Key>
           <Property Name="test_id" Type="int" Nullable="false" />
           <Property Name="sub_category_id" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="teacher">
           <Key>
@@ -122,9 +110,8 @@ warning 6002: The table/view 'r&dTests.dbo.sub_category_test' does not have a pr
           <Property Name="over_mark" Type="float" Nullable="false" />
           <Property Name="level" Type="int" Nullable="false" />
           <Property Name="quesPercent" Type="float" />
+          <Property Name="teacherId" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="test_question">
           <Key>
             <PropertyRef Name="question_id" />
@@ -151,7 +138,7 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
           <Property Name="user_mail" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="status" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK__classTest__class__2DB1C7EE">
+        <Association Name="FK__classTest__class__3F466844">
           <End Role="class" Type="Self.class" Multiplicity="1" />
           <End Role="classTest" Type="Self.classTest" Multiplicity="*" />
           <ReferentialConstraint>
@@ -175,6 +162,30 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__students___stude__5165187F">
+          <End Role="student" Type="Self.student" Multiplicity="1" />
+          <End Role="students_mark" Type="Self.students_mark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="student">
+              <PropertyRef Name="student_id" />
+            </Principal>
+            <Dependent Role="students_mark">
+              <PropertyRef Name="student_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__students___test___52593CB8">
+          <End Role="test" Type="Self.test" Multiplicity="1" />
+          <End Role="students_mark" Type="Self.students_mark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="test">
+              <PropertyRef Name="test_id" />
+            </Principal>
+            <Dependent Role="students_mark">
+              <PropertyRef Name="test_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__sub_categ__categ__00200768">
           <End Role="category" Type="Self.category" Multiplicity="1" />
           <End Role="sub_category" Type="Self.sub_category" Multiplicity="*" />
@@ -184,6 +195,18 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
             </Principal>
             <Dependent Role="sub_category">
               <PropertyRef Name="category_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__test__teacherId__4F7CD00D">
+          <End Role="teacher" Type="Self.teacher" Multiplicity="0..1" />
+          <End Role="test" Type="Self.test" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="teacher">
+              <PropertyRef Name="teacher_id" />
+            </Principal>
+            <Dependent Role="test">
+              <PropertyRef Name="teacherId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -244,30 +267,6 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
             </Principal>
             <Dependent Role="question">
               <PropertyRef Name="type_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_student_answer_answer">
-          <End Role="answer" Type="Self.answer" Multiplicity="1" />
-          <End Role="student_answer" Type="Self.student_answer" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="answer">
-              <PropertyRef Name="answer_id" />
-            </Principal>
-            <Dependent Role="student_answer">
-              <PropertyRef Name="ans_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_student_answer_student">
-          <End Role="student" Type="Self.student" Multiplicity="1" />
-          <End Role="student_answer" Type="Self.student_answer" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="student">
-              <PropertyRef Name="student_id" />
-            </Principal>
-            <Dependent Role="student_answer">
-              <PropertyRef Name="student_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -359,35 +358,24 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
           <EntitySet Name="answer" EntityType="Self.answer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="category" EntityType="Self.category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="class" EntityType="Self.class" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="classTest" EntityType="Self.classTest" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="design" EntityType="Self.design" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="question" EntityType="Self.question" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="student" EntityType="Self.student" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="student_answer" EntityType="Self.student_answer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="students_mark" EntityType="Self.students_mark" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sub_category" EntityType="Self.sub_category" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="teacher" EntityType="Self.teacher" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="test" EntityType="Self.test" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="test_question" EntityType="Self.test_question" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="type" EntityType="Self.type" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="classTest" EntityType="Self.classTest" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [classTest].[class_id] AS [class_id], 
-    [classTest].[test_id] AS [test_id]
-    FROM [dbo].[classTest] AS [classTest]</DefiningQuery>
-          </EntitySet>
           <EntitySet Name="sub_category_test" EntityType="Self.sub_category_test" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [sub_category_test].[test_id] AS [test_id], 
     [sub_category_test].[sub_category_id] AS [sub_category_id]
     FROM [dbo].[sub_category_test] AS [sub_category_test]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="test_question" EntityType="Self.test_question" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [test_question].[question_id] AS [question_id], 
-    [test_question].[test_id] AS [test_id]
-    FROM [dbo].[test_question] AS [test_question]</DefiningQuery>
-          </EntitySet>
-          <AssociationSet Name="FK__classTest__class__2DB1C7EE" Association="Self.FK__classTest__class__2DB1C7EE">
+          <AssociationSet Name="FK__classTest__class__3F466844" Association="Self.FK__classTest__class__3F466844">
             <End Role="class" EntitySet="class" />
             <End Role="classTest" EntitySet="classTest" />
           </AssociationSet>
@@ -395,9 +383,21 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
             <End Role="test" EntitySet="test" />
             <End Role="classTest" EntitySet="classTest" />
           </AssociationSet>
+          <AssociationSet Name="FK__students___stude__5165187F" Association="Self.FK__students___stude__5165187F">
+            <End Role="student" EntitySet="student" />
+            <End Role="students_mark" EntitySet="students_mark" />
+          </AssociationSet>
+          <AssociationSet Name="FK__students___test___52593CB8" Association="Self.FK__students___test___52593CB8">
+            <End Role="test" EntitySet="test" />
+            <End Role="students_mark" EntitySet="students_mark" />
+          </AssociationSet>
           <AssociationSet Name="FK__sub_categ__categ__00200768" Association="Self.FK__sub_categ__categ__00200768">
             <End Role="category" EntitySet="category" />
             <End Role="sub_category" EntitySet="sub_category" />
+          </AssociationSet>
+          <AssociationSet Name="FK__test__teacherId__4F7CD00D" Association="Self.FK__test__teacherId__4F7CD00D">
+            <End Role="teacher" EntitySet="teacher" />
+            <End Role="test" EntitySet="test" />
           </AssociationSet>
           <AssociationSet Name="FK_answer_question" Association="Self.FK_answer_question">
             <End Role="question" EntitySet="question" />
@@ -418,14 +418,6 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
           <AssociationSet Name="FK_question_type" Association="Self.FK_question_type">
             <End Role="type" EntitySet="type" />
             <End Role="question" EntitySet="question" />
-          </AssociationSet>
-          <AssociationSet Name="FK_student_answer_answer" Association="Self.FK_student_answer_answer">
-            <End Role="answer" EntitySet="answer" />
-            <End Role="student_answer" EntitySet="student_answer" />
-          </AssociationSet>
-          <AssociationSet Name="FK_student_answer_student" Association="Self.FK_student_answer_student">
-            <End Role="student" EntitySet="student" />
-            <End Role="student_answer" EntitySet="student_answer" />
           </AssociationSet>
           <AssociationSet Name="FK_student_class" Association="Self.FK_student_class">
             <End Role="class" EntitySet="class" />
@@ -456,8 +448,7 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
             <End Role="test_question" EntitySet="test_question" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="rdTestsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -470,7 +461,6 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
           <Property Name="answer_text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="isCorrect" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="question" Relationship="Self.FK_answer_question" FromRole="answer" ToRole="question" />
-          <NavigationProperty Name="student_answer" Relationship="Self.FK_student_answer_answer" FromRole="answer" ToRole="student_answer" />
         </EntityType>
         <EntityType Name="category">
           <Key>
@@ -523,19 +513,8 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
           <Property Name="extra_time" Type="Boolean" Nullable="false" />
           <Property Name="userId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="class" Relationship="Self.FK_student_class" FromRole="student" ToRole="class" />
-          <NavigationProperty Name="student_answer" Relationship="Self.FK_student_answer_student" FromRole="student" ToRole="student_answer" />
           <NavigationProperty Name="user" Relationship="Self.FK_student_user" FromRole="student" ToRole="user" />
-        </EntityType>
-        <EntityType Name="student_answer">
-          <Key>
-            <PropertyRef Name="student_answer_id" />
-          </Key>
-          <Property Name="student_answer_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="student_id" Type="Int32" Nullable="false" />
-          <Property Name="question_test_id" Type="Int32" Nullable="false" />
-          <Property Name="ans_id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="answer" Relationship="Self.FK_student_answer_answer" FromRole="student_answer" ToRole="answer" />
-          <NavigationProperty Name="student" Relationship="Self.FK_student_answer_student" FromRole="student_answer" ToRole="student" />
+          <NavigationProperty Name="students_mark" Relationship="rdTestsModel.FK__students___stude__5165187F" FromRole="student" ToRole="students_mark" />
         </EntityType>
         <EntityType Name="sub_category">
           <Key>
@@ -548,16 +527,6 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
           <NavigationProperty Name="questions" Relationship="Self.FK_question_sub_category" FromRole="sub_category" ToRole="question" />
           <NavigationProperty Name="tests" Relationship="Self.sub_category_test" FromRole="sub_category" ToRole="test" />
         </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
         <EntityType Name="teacher">
           <Key>
             <PropertyRef Name="teacher_id" />
@@ -568,6 +537,7 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
           <NavigationProperty Name="categories" Relationship="Self.FK_category_teacher" FromRole="teacher" ToRole="category" />
           <NavigationProperty Name="classes" Relationship="Self.FK_class_teacher" FromRole="teacher" ToRole="class" />
           <NavigationProperty Name="user" Relationship="Self.FK_teacher_user" FromRole="teacher" ToRole="user" />
+          <NavigationProperty Name="tests" Relationship="rdTestsModel.FK__test__teacherId__4F7CD00D" FromRole="teacher" ToRole="test" />
         </EntityType>
         <EntityType Name="test">
           <Key>
@@ -581,8 +551,11 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
           <Property Name="level" Type="Int32" Nullable="false" />
           <Property Name="quesPercent" Type="Double" />
           <NavigationProperty Name="classes" Relationship="Self.classTest" FromRole="test" ToRole="class" />
-          <NavigationProperty Name="sub_category" Relationship="Self.sub_category_test" FromRole="test" ToRole="sub_category" />
           <NavigationProperty Name="questions" Relationship="Self.test_question" FromRole="test" ToRole="question" />
+          <NavigationProperty Name="sub_category" Relationship="Self.sub_category_test" FromRole="test" ToRole="sub_category" />
+          <Property Name="teacherId" Type="Int32" />
+          <NavigationProperty Name="teacher" Relationship="rdTestsModel.FK__test__teacherId__4F7CD00D" FromRole="test" ToRole="teacher" />
+          <NavigationProperty Name="students_mark" Relationship="rdTestsModel.FK__students___test___52593CB8" FromRole="test" ToRole="students_mark" />
         </EntityType>
         <EntityType Name="type">
           <Key>
@@ -614,18 +587,6 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
             </Principal>
             <Dependent Role="answer">
               <PropertyRef Name="question_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_student_answer_answer">
-          <End Role="answer" Type="Self.answer" Multiplicity="1" />
-          <End Role="student_answer" Type="Self.student_answer" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="answer">
-              <PropertyRef Name="answer_id" />
-            </Principal>
-            <Dependent Role="student_answer">
-              <PropertyRef Name="ans_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -701,18 +662,6 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_student_answer_student">
-          <End Role="student" Type="Self.student" Multiplicity="1" />
-          <End Role="student_answer" Type="Self.student_answer" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="student">
-              <PropertyRef Name="student_id" />
-            </Principal>
-            <Dependent Role="student_answer">
-              <PropertyRef Name="student_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_student_user">
           <End Role="user" Type="Self.user" Multiplicity="1" />
           <End Role="student" Type="Self.student" Multiplicity="*" />
@@ -741,12 +690,12 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
           <End Role="class" Type="Self.class" Multiplicity="*" />
           <End Role="test" Type="Self.test" Multiplicity="*" />
         </Association>
-        <Association Name="sub_category_test">
-          <End Role="sub_category" Type="Self.sub_category" Multiplicity="*" />
-          <End Role="test" Type="Self.test" Multiplicity="*" />
-        </Association>
         <Association Name="test_question">
           <End Role="question" Type="Self.question" Multiplicity="*" />
+          <End Role="test" Type="Self.test" Multiplicity="*" />
+        </Association>
+        <Association Name="sub_category_test">
+          <End Role="sub_category" Type="Self.sub_category" Multiplicity="*" />
           <End Role="test" Type="Self.test" Multiplicity="*" />
         </Association>
         <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
@@ -756,9 +705,7 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
           <EntitySet Name="designs" EntityType="Self.design" />
           <EntitySet Name="questions" EntityType="Self.question" />
           <EntitySet Name="students" EntityType="Self.student" />
-          <EntitySet Name="student_answer" EntityType="Self.student_answer" />
           <EntitySet Name="sub_category" EntityType="Self.sub_category" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="teachers" EntityType="Self.teacher" />
           <EntitySet Name="tests" EntityType="Self.test" />
           <EntitySet Name="types" EntityType="Self.type" />
@@ -766,10 +713,6 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
           <AssociationSet Name="FK_answer_question" Association="Self.FK_answer_question">
             <End Role="question" EntitySet="questions" />
             <End Role="answer" EntitySet="answers" />
-          </AssociationSet>
-          <AssociationSet Name="FK_student_answer_answer" Association="Self.FK_student_answer_answer">
-            <End Role="answer" EntitySet="answers" />
-            <End Role="student_answer" EntitySet="student_answer" />
           </AssociationSet>
           <AssociationSet Name="FK__sub_categ__categ__00200768" Association="Self.FK__sub_categ__categ__00200768">
             <End Role="category" EntitySet="categories" />
@@ -795,10 +738,6 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
             <End Role="type" EntitySet="types" />
             <End Role="question" EntitySet="questions" />
           </AssociationSet>
-          <AssociationSet Name="FK_student_answer_student" Association="Self.FK_student_answer_student">
-            <End Role="student" EntitySet="students" />
-            <End Role="student_answer" EntitySet="student_answer" />
-          </AssociationSet>
           <AssociationSet Name="FK_student_user" Association="Self.FK_student_user">
             <End Role="user" EntitySet="users" />
             <End Role="student" EntitySet="students" />
@@ -811,15 +750,75 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
             <End Role="class" EntitySet="classes" />
             <End Role="test" EntitySet="tests" />
           </AssociationSet>
-          <AssociationSet Name="sub_category_test" Association="Self.sub_category_test">
-            <End Role="sub_category" EntitySet="sub_category" />
-            <End Role="test" EntitySet="tests" />
-          </AssociationSet>
           <AssociationSet Name="test_question" Association="Self.test_question">
             <End Role="question" EntitySet="questions" />
             <End Role="test" EntitySet="tests" />
           </AssociationSet>
+          <AssociationSet Name="sub_category_test" Association="Self.sub_category_test">
+            <End Role="sub_category" EntitySet="sub_category" />
+            <End Role="test" EntitySet="tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK__test__teacherId__4F7CD00D" Association="rdTestsModel.FK__test__teacherId__4F7CD00D">
+            <End Role="teacher" EntitySet="teachers" />
+            <End Role="test" EntitySet="tests" />
+          </AssociationSet>
+          <EntitySet Name="students_mark" EntityType="rdTestsModel.students_mark" />
+          <AssociationSet Name="FK__students___stude__5165187F" Association="rdTestsModel.FK__students___stude__5165187F">
+            <End Role="student" EntitySet="students" />
+            <End Role="students_mark" EntitySet="students_mark" />
+          </AssociationSet>
+          <AssociationSet Name="FK__students___test___52593CB8" Association="rdTestsModel.FK__students___test___52593CB8">
+            <End Role="test" EntitySet="tests" />
+            <End Role="students_mark" EntitySet="students_mark" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK__test__teacherId__4F7CD00D">
+          <End Type="rdTestsModel.teacher" Role="teacher" Multiplicity="0..1" />
+          <End Type="rdTestsModel.test" Role="test" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="teacher">
+              <PropertyRef Name="teacher_id" />
+            </Principal>
+            <Dependent Role="test">
+              <PropertyRef Name="teacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="students_mark">
+          <Key>
+            <PropertyRef Name="student_id" />
+            <PropertyRef Name="test_id" />
+          </Key>
+          <Property Name="student_id" Type="Int32" Nullable="false" />
+          <Property Name="test_id" Type="Int32" Nullable="false" />
+          <Property Name="mark" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="student" Relationship="rdTestsModel.FK__students___stude__5165187F" FromRole="students_mark" ToRole="student" />
+          <NavigationProperty Name="test" Relationship="rdTestsModel.FK__students___test___52593CB8" FromRole="students_mark" ToRole="test" />
+        </EntityType>
+        <Association Name="FK__students___stude__5165187F">
+          <End Type="rdTestsModel.student" Role="student" Multiplicity="1" />
+          <End Type="rdTestsModel.students_mark" Role="students_mark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="student">
+              <PropertyRef Name="student_id" />
+            </Principal>
+            <Dependent Role="students_mark">
+              <PropertyRef Name="student_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__students___test___52593CB8">
+          <End Type="rdTestsModel.test" Role="test" Multiplicity="1" />
+          <End Type="rdTestsModel.students_mark" Role="students_mark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="test">
+              <PropertyRef Name="test_id" />
+            </Principal>
+            <Dependent Role="students_mark">
+              <PropertyRef Name="test_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -883,33 +882,12 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="student_answer">
-            <EntityTypeMapping TypeName="rdTestsModel.student_answer">
-              <MappingFragment StoreEntitySet="student_answer">
-                <ScalarProperty Name="student_answer_id" ColumnName="student_answer_id" />
-                <ScalarProperty Name="student_id" ColumnName="student_id" />
-                <ScalarProperty Name="question_test_id" ColumnName="question_test_id" />
-                <ScalarProperty Name="ans_id" ColumnName="ans_id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="sub_category">
             <EntityTypeMapping TypeName="rdTestsModel.sub_category">
               <MappingFragment StoreEntitySet="sub_category">
                 <ScalarProperty Name="sub_category_id" ColumnName="sub_category_id" />
                 <ScalarProperty Name="category_id" ColumnName="category_id" />
                 <ScalarProperty Name="sub_category_name" ColumnName="sub_category_name" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="rdTestsModel.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -925,6 +903,7 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
           <EntitySetMapping Name="tests">
             <EntityTypeMapping TypeName="rdTestsModel.test">
               <MappingFragment StoreEntitySet="test">
+                <ScalarProperty Name="teacherId" ColumnName="teacherId" />
                 <ScalarProperty Name="test_id" ColumnName="test_id" />
                 <ScalarProperty Name="test_date" ColumnName="test_date" />
                 <ScalarProperty Name="test_start_time" ColumnName="test_start_time" />
@@ -963,14 +942,6 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
               <ScalarProperty Name="test_id" ColumnName="test_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="sub_category_test" TypeName="rdTestsModel.sub_category_test" StoreEntitySet="sub_category_test">
-            <EndProperty Name="sub_category">
-              <ScalarProperty Name="sub_category_id" ColumnName="sub_category_id" />
-            </EndProperty>
-            <EndProperty Name="test">
-              <ScalarProperty Name="test_id" ColumnName="test_id" />
-            </EndProperty>
-          </AssociationSetMapping>
           <AssociationSetMapping Name="test_question" TypeName="rdTestsModel.test_question" StoreEntitySet="test_question">
             <EndProperty Name="question">
               <ScalarProperty Name="question_id" ColumnName="question_id" />
@@ -979,6 +950,23 @@ warning 6002: The table/view 'r&dTests.dbo.test_question' does not have a primar
               <ScalarProperty Name="test_id" ColumnName="test_id" />
             </EndProperty>
           </AssociationSetMapping>
+          <AssociationSetMapping Name="sub_category_test" TypeName="rdTestsModel.sub_category_test" StoreEntitySet="sub_category_test">
+            <EndProperty Name="sub_category">
+              <ScalarProperty Name="sub_category_id" ColumnName="sub_category_id" />
+            </EndProperty>
+            <EndProperty Name="test">
+              <ScalarProperty Name="test_id" ColumnName="test_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="students_mark">
+            <EntityTypeMapping TypeName="rdTestsModel.students_mark">
+              <MappingFragment StoreEntitySet="students_mark">
+                <ScalarProperty Name="mark" ColumnName="mark" />
+                <ScalarProperty Name="test_id" ColumnName="test_id" />
+                <ScalarProperty Name="student_id" ColumnName="student_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
