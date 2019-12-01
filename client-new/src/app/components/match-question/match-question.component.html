@@ -6,13 +6,13 @@
     <!-- questions Column -->
     <ng-container matColumnDef="questions">
       <th mat-header-cell *matHeaderCellDef> questions </th>
-      <td mat-cell *matCellDef="let element; index as i" ><button (click)="onSelectedQuestion(i)" [style.background-color]="selectedRow==i ? 'currColor':'blue'"> {{element.questions.question_text}}{{i}}</button> </td>
+      <td mat-cell *matCellDef="let element; index as i" ><button (click)="onSelectedQuestion(element.questions,i)" [style.background-color]="answerColor[i]"> {{element.questions.question_text}}{{i}}</button> </td>
     </ng-container>
   
     <!-- answers Column -->
     <ng-container matColumnDef="answers">
       <th mat-header-cell *matHeaderCellDef> answers </th>
-      <td mat-cell *matCellDef="let element" ><button (click)="onSelectedAnswer(element.answers)"> {{element.answers.answer_text}}</button> </td>
+      <td mat-cell *matCellDef="let element; index as j" ><button (click)="onSelectedAnswer(element.answers,j)" [style.background-color]="questionColor[j]"> {{element.answers.answer_text}}</button> </td>
     </ng-container>
   
     

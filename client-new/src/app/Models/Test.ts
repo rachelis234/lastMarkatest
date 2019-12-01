@@ -8,4 +8,6 @@ export class Test{
     over_mark:number;
     enable:boolean;
     level:number;
+    teacherId:number;
+    name:string
     }

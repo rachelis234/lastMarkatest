@@ -25,3 +25,11 @@
           <input type="button" (click)="editStudent()" value="Edit">
         </div>
 </form>
+
+<h4>marks:</h4>
+<div *ngFor="let m of marks">
+    {{m.test.name}}
+    {{m.mark}}
+  
+  </div>
+  

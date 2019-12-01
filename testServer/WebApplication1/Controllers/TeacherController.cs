@@ -24,5 +24,19 @@ namespace WebApplication1.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [Route("getStudentsMarks/{teacherId}")]
+        [HttpGet]
+        public IHttpActionResult GetMark([FromUri] int teacherId)
+        {
+            try
+            {
+                return Ok(TeacherLogic.GetMark(teacherId));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

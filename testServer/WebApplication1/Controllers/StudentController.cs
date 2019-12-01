@@ -119,5 +119,47 @@ namespace WebApplication1.Controllers
         return BadRequest(ex.Message);
       }
     }
-  }
+
+
+        [Route("saveMark")]
+        [HttpPost]
+        public IHttpActionResult SaveMark([FromBody]student_markDTO studentMark)
+        {
+            try
+            {
+                return Ok(StudentLogic.SaveMark(studentMark));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [Route("getMarks/{studentId}")]
+        [HttpGet]
+        public IHttpActionResult getMark([FromUri] int studentId)
+        {
+            try
+            {
+                return Ok(StudentLogic.GetMark(studentId));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [Route("getStudentMarks/{studentId}/{teacherId}")]
+        [HttpGet]
+        public IHttpActionResult getStudentMarks([FromUri] int studentId, [FromUri] int teacherId)
+        {
+            try
+            {
+                return Ok(StudentLogic.getStudentMarks(studentId, teacherId));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+    }
 }

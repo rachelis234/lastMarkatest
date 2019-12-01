@@ -146,6 +146,44 @@ namespace BL
                 throw e;
             }
         }
+
+        public static List<student_markDTO> getStudentMarks(int studentId, int teacherId)
+        {
+            using (Entities e = new Entities())
+            {
+                var marks = e.students_mark.Where(sm => sm.student.userId == studentId&& sm.test.teacherId==teacherId).ToList();
+                return student_markCasting.studentsMarkToDTO(marks);
+            }
+        }
+
+        public static List<student_markDTO> GetMark(int studentId)
+        {
+            using (Entities e = new Entities())
+            {
+                var marks = e.students_mark.Where(sm => sm.student_id == studentId).ToList();
+               return    student_markCasting.studentsMarkToDTO(marks);
+            }
+        }
+
+        public static bool SaveMark(student_markDTO studentMark)
+        {
+            using (Entities e = new Entities())
+            {
+                var studentM = e.students_mark.FirstOrDefault(s => s.student_id==studentMark.student_id&&s.test_id==studentMark.test_id);
+                if (studentM != null)
+                {
+                    studentM.mark = studentMark.mark;
+                   
+                }
+                else
+                {
+                    e.students_mark.Add(student_markCasting.studentMarkToDAL( studentMark));
+                }
+                e.SaveChanges();
+            }
+            return true;
+        }
+
         //פונקציה למחיקת תלמיד
         public static void DeleteStudent(int id)
         {

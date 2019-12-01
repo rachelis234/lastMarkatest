@@ -56,6 +56,8 @@ export class MatchQuestionComponent implements OnInit {
     "#f812b3", "#b17fc9", "#8d6c2f", "#d3277a", "#2ca1ae", "#9685eb", "#8a96c6",
     "#dba2e6", "#76fc1b", "#608fa4", "#20f6ba", "#07d7f6", "#dce77a", "#77ecca"]
   displayedColumns: string[] = ['questions', 'answers'];
+  answerColor;
+  questionColor;
   question: Question[];
   answers: Answer[] = new Array<Answer>();
   dataSource: SolveMatchDataSourse[] = new Array<SolveMatchDataSourse>();
@@ -75,35 +77,37 @@ selectedRow:number
 
     this.fillDataSourse();
   }
-  onSelectedAnswer(event: MouseEvent, ans: Answer) {
+  onSelectedAnswer(ans: Answer, i:number) {
     if (this.lastQues == null) {
       console.log("first choose ques!!!!!!!!!!!!!!!!!");
       return;
     }
-    debugger;
     console.log(ans);
     for (let i of this.userService.solveTest.selectedAnswer) {
       if (i.question_id == ans.question_id) {
         this.userService.solveTest.selectedAnswer.splice(this.userService.solveTest.selectedAnswer.indexOf(i), 1);
       }
     }
-
+ans['qusid']=this.lastQues.question_id;
     this.userService.solveTest.selectedAnswer.push(ans);
     console.log(this.userService.solveTest.selectedAnswer);
+    this.questionColor[i]=[this.currColor];
     this.lastQues = null;
   }
   onSelectedQuestion(ques: Question,i:number) {
    
-    debugger;
     console.log(event);
     this.lastQues = ques;
     this.currColor = this.colors.pop();
-this.selectedRow=i;
+    this.answerColor[i]=[this.currColor];
+    this.selectedRow=i;
   }
   fillDataSourse() {
     let rand: number;
     let len: number = this.question.length;
     let i: number;
+this.answerColor=new Array(len);
+this.questionColor=new Array(len);
 
     for (i = 0; i < len; i++) {
       let elem: SolveMatchDataSourse;
