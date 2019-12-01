@@ -12,14 +12,13 @@ namespace DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class student_answer
+    public partial class students_mark
     {
-        public int student_answer_id { get; set; }
         public int student_id { get; set; }
-        public int question_test_id { get; set; }
-        public int ans_id { get; set; }
+        public int test_id { get; set; }
+        public int mark { get; set; }
     
-        public virtual answer answer { get; set; }
         public virtual student student { get; set; }
+        public virtual test test { get; set; }
     }
 }

@@ -15,6 +15,8 @@ namespace DTO
         public double over_mark { get; set; }
         public int level { get; set; }
         public Nullable<double> quesPercent { get; set; }
+        public Nullable<int> teacherId { get; set; }
+
 
     }
 }

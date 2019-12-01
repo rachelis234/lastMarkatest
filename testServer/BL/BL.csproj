@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="Casting\AnswerCasting.cs" />
     <Compile Include="Casting\CategoryCasting.cs" />
+    <Compile Include="Casting\Student_markCasting.cs" />
     <Compile Include="Casting\ClassCasting.cs" />
     <Compile Include="Casting\DesignCasting.cs" />
     <Compile Include="Casting\QuestionCasting.cs" />

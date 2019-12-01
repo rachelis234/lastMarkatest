@@ -3,6 +3,7 @@ using DAL;
 using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -78,7 +79,7 @@ namespace BL
 			}
 		}
 
-		public static SolveTest GetTest(int studentId, long time)
+		public static SolveTest GetTest(int studentId, DateTime time)
 		{
 			using (Entities e = new Entities())
 			{
@@ -88,21 +89,30 @@ namespace BL
 					test testDal = new test();
 
 
+                    var student = e.students.FirstOrDefault(s => s.userId == studentId);
+                    if (student != null)
+                    {
+                        var teacherId = student.@class.teacher_id;
+                        var test = e.tests.FirstOrDefault(t => t.teacherId == teacherId
+                           && t.test_date == time.Date && t.test_start_time < time.TimeOfDay && t.test_end_time > time.TimeOfDay);
+                        var TTT = e.tests.ToList(); 
+                        if (test != null)
+                        {
+                                sTest.test = TestCasting.TestToDTO(test);
 
-					sTest.test = TestCasting.TestToDTO(testDal = e.tests.FirstOrDefault(t => t.sub_category.FirstOrDefault().category.teacher_id == e.students.FirstOrDefault(s => s.userId == studentId).@class.teacher_id));
+                                sTest.questions = QuestionCasting.QuestionsToDTO((test.questions).ToList());
+                            var x = e.answers.ToList();
+                            var questionsIds = sTest.questions.Select(t => t.question_id).ToList();
+                            var y = x.Where(a => questionsIds.Contains(a.question_id)).ToList();
+                            sTest.answers = AnswerCasting.AnswersToDTO(y);
+                            return sTest;
+                        }
+                        throw new Exception("no test0");
+                    }
+                    throw new Exception("no student");
 
-					if (sTest.test != null)
-					{
-						sTest.questions = QuestionCasting.QuestionsToDTO((testDal.questions).ToList());
-						var x = e.answers.ToList();
-
-						var y = x.Where(a => (sTest.questions.FirstOrDefault(q => q.question_id == a.question_id)) != null).ToList();
-						sTest.answers = AnswerCasting.AnswersToDTO(y);
-						return sTest;
-					}
-					throw new Exception("no test0");
-				}
-				catch (Exception ex)
+                }
+                catch (Exception ex)
 				{
 
 					throw ex;
@@ -168,15 +178,14 @@ namespace BL
 				{
 					//add new test
 					var t=e.tests.Add(TestCasting.TestToDAL(newtest.test));
-                    e.SaveChanges();
                     //add classes o the new test
-                    t.classes.AddRange(ClassCasting.ClassesToDAL(newtest.classes));
-					//add questions to the new test
-					t.questions.AddRange(QuestionCasting.QuestionsToDAL(newtest.questions));
+                    t.classes=ClassCasting.ClassesToDAL(newtest.classes);
+                    //add questions to the new test
+                    t.questions=QuestionCasting.QuestionsToDAL(newtest.questions);
 					wb.status = true;
 					wb.message = "succeed";
 					wb.value = TestCasting.TestToDTO(t);
-					e.SaveChanges();
+                    e.SaveChanges();
 					return wb;
 				}
 				catch (Exception ex)

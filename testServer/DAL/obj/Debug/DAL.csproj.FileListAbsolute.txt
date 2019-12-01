@@ -43,3 +43,14 @@ C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DAL\obj\Debug
 C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DAL\obj\Debug\DAL.dll
 C:\Users\USER\Desktop\dinaProject\final project\project\testServer\DAL\obj\Debug\DAL.pdb
+C:\Users\User\Desktop\testProjet\lastMarkatest\testServer\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\testProjet\lastMarkatest\testServer\DAL\obj\Debug\DAL.dll
+C:\Users\User\Desktop\testProjet\lastMarkatest\testServer\DAL\obj\Debug\DAL.pdb
+C:\Users\User\Desktop\testProjet\lastMarkatest\testServer\DAL\bin\Debug\DAL.dll.config
+C:\Users\User\Desktop\testProjet\lastMarkatest\testServer\DAL\bin\Debug\DAL.dll
+C:\Users\User\Desktop\testProjet\lastMarkatest\testServer\DAL\bin\Debug\DAL.pdb
+C:\Users\User\Desktop\testProjet\lastMarkatest\testServer\DAL\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\testProjet\lastMarkatest\testServer\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\testProjet\lastMarkatest\testServer\DAL\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\testProjet\lastMarkatest\testServer\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\testProjet\lastMarkatest\testServer\DAL\obj\Debug\DAL.csproj.CopyComplete

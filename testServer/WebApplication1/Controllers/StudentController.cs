@@ -119,5 +119,20 @@ namespace WebApplication1.Controllers
         return BadRequest(ex.Message);
       }
     }
-  }
+
+
+        [Route("saveMark")]
+        [HttpPost]
+        public IHttpActionResult SaveMark([FromBody]student_markDTO studentMark)
+        {
+            try
+            {
+                return Ok(StudentLogic.SaveMark(studentMark));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+    }
 }

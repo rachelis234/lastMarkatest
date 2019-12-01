@@ -20,7 +20,6 @@ export class YesNoQuestionComponent implements OnInit {
   }
   onSelectedAnswer(event:MatRadioChange)
   {
-    
     for(let i of this.userService.solveTest.selectedAnswer)
     {
       if(i.question_id==event.value.question_id)

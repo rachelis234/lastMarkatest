@@ -18,8 +18,9 @@ namespace DAL
         public test()
         {
             this.classes = new HashSet<@class>();
-            this.sub_category = new HashSet<sub_category>();
             this.questions = new HashSet<question>();
+            this.sub_category = new HashSet<sub_category>();
+            this.students_mark = new HashSet<students_mark>();
         }
     
         public int test_id { get; set; }
@@ -29,12 +30,16 @@ namespace DAL
         public double over_mark { get; set; }
         public int level { get; set; }
         public Nullable<double> quesPercent { get; set; }
+        public Nullable<int> teacherId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<@class> classes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<sub_category> sub_category { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<question> questions { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<sub_category> sub_category { get; set; }
+        public virtual teacher teacher { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<students_mark> students_mark { get; set; }
     }
 }

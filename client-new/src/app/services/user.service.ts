@@ -15,7 +15,7 @@ export class UserService {
   user:any;
   categoriesForTeacher:Category[];
   classesForTeacher:Class[];
-  testsForTeacher:Test[];
+  testsForTeacher:Test[]=[];
   questionsForTeacher:Array<Question>=new Array<Question>();
   showSpinner:boolean=false;
   solveTest:SolveTest;
@@ -44,5 +44,9 @@ export class UserService {
   }
   getQuestionsForTeacher(){
     return this.httpService.get(environment.api+'/Question/getQuestions?teacherId='+(this.user as Teacher).teacherId);
+  }
+  saveMark(studentMark){
+    return this.httpService.post(environment.api+'/Student/saveMark', studentMark);
+
   }
 }

@@ -84,9 +84,10 @@ namespace WebApplication1.Controllers
 
       try
       {
+        var date = new DateTime(time);
         wb.status = true;
         wb.message = "success";
-        wb.value = TestLogic.GetTest(id, time);
+        wb.value = TestLogic.GetTest(id, date);
         return wb;
       }
       catch (Exception e)

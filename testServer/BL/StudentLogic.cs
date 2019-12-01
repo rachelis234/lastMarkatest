@@ -146,6 +146,26 @@ namespace BL
                 throw e;
             }
         }
+
+        public static bool SaveMark(student_markDTO studentMark)
+        {
+            using (Entities e = new Entities())
+            {
+                var studentM = e.students_mark.FirstOrDefault(s => s.student_id==studentMark.student_id&&s.test_id==studentMark.test_id);
+                if (studentM != null)
+                {
+                    studentM.mark = studentMark.mark;
+                   
+                }
+                else
+                {
+                    e.students_mark.Add(student_markCasting.studentMarkToDAL( studentMark));
+                }
+                e.SaveChanges();
+            }
+            return true;
+        }
+
         //פונקציה למחיקת תלמיד
         public static void DeleteStudent(int id)
         {

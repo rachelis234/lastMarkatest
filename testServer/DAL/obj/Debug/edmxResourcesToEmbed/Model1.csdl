@@ -9,7 +9,6 @@
     <Property Name="answer_text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="isCorrect" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="question" Relationship="Self.FK_answer_question" FromRole="answer" ToRole="question" />
-    <NavigationProperty Name="student_answer" Relationship="Self.FK_student_answer_answer" FromRole="answer" ToRole="student_answer" />
   </EntityType>
   <EntityType Name="category">
     <Key>
@@ -62,19 +61,8 @@
     <Property Name="extra_time" Type="Boolean" Nullable="false" />
     <Property Name="userId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="class" Relationship="Self.FK_student_class" FromRole="student" ToRole="class" />
-    <NavigationProperty Name="student_answer" Relationship="Self.FK_student_answer_student" FromRole="student" ToRole="student_answer" />
     <NavigationProperty Name="user" Relationship="Self.FK_student_user" FromRole="student" ToRole="user" />
-  </EntityType>
-  <EntityType Name="student_answer">
-    <Key>
-      <PropertyRef Name="student_answer_id" />
-    </Key>
-    <Property Name="student_answer_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="student_id" Type="Int32" Nullable="false" />
-    <Property Name="question_test_id" Type="Int32" Nullable="false" />
-    <Property Name="ans_id" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="answer" Relationship="Self.FK_student_answer_answer" FromRole="student_answer" ToRole="answer" />
-    <NavigationProperty Name="student" Relationship="Self.FK_student_answer_student" FromRole="student_answer" ToRole="student" />
+    <NavigationProperty Name="students_mark" Relationship="rdTestsModel.FK__students___stude__5165187F" FromRole="student" ToRole="students_mark" />
   </EntityType>
   <EntityType Name="sub_category">
     <Key>
@@ -97,6 +85,7 @@
     <NavigationProperty Name="categories" Relationship="Self.FK_category_teacher" FromRole="teacher" ToRole="category" />
     <NavigationProperty Name="classes" Relationship="Self.FK_class_teacher" FromRole="teacher" ToRole="class" />
     <NavigationProperty Name="user" Relationship="Self.FK_teacher_user" FromRole="teacher" ToRole="user" />
+    <NavigationProperty Name="tests" Relationship="rdTestsModel.FK__test__teacherId__4F7CD00D" FromRole="teacher" ToRole="test" />
   </EntityType>
   <EntityType Name="test">
     <Key>
@@ -110,8 +99,11 @@
     <Property Name="level" Type="Int32" Nullable="false" />
     <Property Name="quesPercent" Type="Double" />
     <NavigationProperty Name="classes" Relationship="Self.classTest" FromRole="test" ToRole="class" />
-    <NavigationProperty Name="sub_category" Relationship="Self.sub_category_test" FromRole="test" ToRole="sub_category" />
     <NavigationProperty Name="questions" Relationship="Self.test_question" FromRole="test" ToRole="question" />
+    <NavigationProperty Name="sub_category" Relationship="Self.sub_category_test" FromRole="test" ToRole="sub_category" />
+    <Property Name="teacherId" Type="Int32" />
+    <NavigationProperty Name="teacher" Relationship="rdTestsModel.FK__test__teacherId__4F7CD00D" FromRole="test" ToRole="teacher" />
+    <NavigationProperty Name="students_mark" Relationship="rdTestsModel.FK__students___test___52593CB8" FromRole="test" ToRole="students_mark" />
   </EntityType>
   <EntityType Name="type">
     <Key>
@@ -143,18 +135,6 @@
       </Principal>
       <Dependent Role="answer">
         <PropertyRef Name="question_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_student_answer_answer">
-    <End Role="answer" Type="Self.answer" Multiplicity="1" />
-    <End Role="student_answer" Type="Self.student_answer" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="answer">
-        <PropertyRef Name="answer_id" />
-      </Principal>
-      <Dependent Role="student_answer">
-        <PropertyRef Name="ans_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -230,18 +210,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_student_answer_student">
-    <End Role="student" Type="Self.student" Multiplicity="1" />
-    <End Role="student_answer" Type="Self.student_answer" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="student">
-        <PropertyRef Name="student_id" />
-      </Principal>
-      <Dependent Role="student_answer">
-        <PropertyRef Name="student_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_student_user">
     <End Role="user" Type="Self.user" Multiplicity="1" />
     <End Role="student" Type="Self.student" Multiplicity="*" />
@@ -270,12 +238,12 @@
     <End Role="class" Type="Self.class" Multiplicity="*" />
     <End Role="test" Type="Self.test" Multiplicity="*" />
   </Association>
-  <Association Name="sub_category_test">
-    <End Role="sub_category" Type="Self.sub_category" Multiplicity="*" />
-    <End Role="test" Type="Self.test" Multiplicity="*" />
-  </Association>
   <Association Name="test_question">
     <End Role="question" Type="Self.question" Multiplicity="*" />
+    <End Role="test" Type="Self.test" Multiplicity="*" />
+  </Association>
+  <Association Name="sub_category_test">
+    <End Role="sub_category" Type="Self.sub_category" Multiplicity="*" />
     <End Role="test" Type="Self.test" Multiplicity="*" />
   </Association>
   <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
@@ -285,7 +253,6 @@
     <EntitySet Name="designs" EntityType="Self.design" />
     <EntitySet Name="questions" EntityType="Self.question" />
     <EntitySet Name="students" EntityType="Self.student" />
-    <EntitySet Name="student_answer" EntityType="Self.student_answer" />
     <EntitySet Name="sub_category" EntityType="Self.sub_category" />
     <EntitySet Name="teachers" EntityType="Self.teacher" />
     <EntitySet Name="tests" EntityType="Self.test" />
@@ -294,10 +261,6 @@
     <AssociationSet Name="FK_answer_question" Association="Self.FK_answer_question">
       <End Role="question" EntitySet="questions" />
       <End Role="answer" EntitySet="answers" />
-    </AssociationSet>
-    <AssociationSet Name="FK_student_answer_answer" Association="Self.FK_student_answer_answer">
-      <End Role="answer" EntitySet="answers" />
-      <End Role="student_answer" EntitySet="student_answer" />
     </AssociationSet>
     <AssociationSet Name="FK__sub_categ__categ__00200768" Association="Self.FK__sub_categ__categ__00200768">
       <End Role="category" EntitySet="categories" />
@@ -323,10 +286,6 @@
       <End Role="type" EntitySet="types" />
       <End Role="question" EntitySet="questions" />
     </AssociationSet>
-    <AssociationSet Name="FK_student_answer_student" Association="Self.FK_student_answer_student">
-      <End Role="student" EntitySet="students" />
-      <End Role="student_answer" EntitySet="student_answer" />
-    </AssociationSet>
     <AssociationSet Name="FK_student_user" Association="Self.FK_student_user">
       <End Role="user" EntitySet="users" />
       <End Role="student" EntitySet="students" />
@@ -339,13 +298,73 @@
       <End Role="class" EntitySet="classes" />
       <End Role="test" EntitySet="tests" />
     </AssociationSet>
-    <AssociationSet Name="sub_category_test" Association="Self.sub_category_test">
-      <End Role="sub_category" EntitySet="sub_category" />
-      <End Role="test" EntitySet="tests" />
-    </AssociationSet>
     <AssociationSet Name="test_question" Association="Self.test_question">
       <End Role="question" EntitySet="questions" />
       <End Role="test" EntitySet="tests" />
     </AssociationSet>
+    <AssociationSet Name="sub_category_test" Association="Self.sub_category_test">
+      <End Role="sub_category" EntitySet="sub_category" />
+      <End Role="test" EntitySet="tests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__test__teacherId__4F7CD00D" Association="rdTestsModel.FK__test__teacherId__4F7CD00D">
+      <End Role="teacher" EntitySet="teachers" />
+      <End Role="test" EntitySet="tests" />
+    </AssociationSet>
+    <EntitySet Name="students_mark" EntityType="rdTestsModel.students_mark" />
+    <AssociationSet Name="FK__students___stude__5165187F" Association="rdTestsModel.FK__students___stude__5165187F">
+      <End Role="student" EntitySet="students" />
+      <End Role="students_mark" EntitySet="students_mark" />
+    </AssociationSet>
+    <AssociationSet Name="FK__students___test___52593CB8" Association="rdTestsModel.FK__students___test___52593CB8">
+      <End Role="test" EntitySet="tests" />
+      <End Role="students_mark" EntitySet="students_mark" />
+    </AssociationSet>
   </EntityContainer>
+  <Association Name="FK__test__teacherId__4F7CD00D">
+    <End Type="rdTestsModel.teacher" Role="teacher" Multiplicity="0..1" />
+    <End Type="rdTestsModel.test" Role="test" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher">
+        <PropertyRef Name="teacher_id" />
+      </Principal>
+      <Dependent Role="test">
+        <PropertyRef Name="teacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="students_mark">
+    <Key>
+      <PropertyRef Name="student_id" />
+      <PropertyRef Name="test_id" />
+    </Key>
+    <Property Name="student_id" Type="Int32" Nullable="false" />
+    <Property Name="test_id" Type="Int32" Nullable="false" />
+    <Property Name="mark" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="student" Relationship="rdTestsModel.FK__students___stude__5165187F" FromRole="students_mark" ToRole="student" />
+    <NavigationProperty Name="test" Relationship="rdTestsModel.FK__students___test___52593CB8" FromRole="students_mark" ToRole="test" />
+  </EntityType>
+  <Association Name="FK__students___stude__5165187F">
+    <End Type="rdTestsModel.student" Role="student" Multiplicity="1" />
+    <End Type="rdTestsModel.students_mark" Role="students_mark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="students_mark">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__students___test___52593CB8">
+    <End Type="rdTestsModel.test" Role="test" Multiplicity="1" />
+    <End Type="rdTestsModel.students_mark" Role="students_mark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="test">
+        <PropertyRef Name="test_id" />
+      </Principal>
+      <Dependent Role="students_mark">
+        <PropertyRef Name="test_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

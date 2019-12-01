@@ -11,5 +11,7 @@ namespace DTO
         public int answer_id { get; set; }
         public int question_id { get; set; }
         public string answer_text { get; set; }
+        public bool isCorrect { get; set; }
+
     }
 }

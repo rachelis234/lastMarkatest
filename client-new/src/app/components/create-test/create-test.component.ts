@@ -84,7 +84,7 @@ export class CreateTestComponent implements OnInit {
     if (this.generate == 'true') {
       this.generatedTest.classes = this.classes.value;
       this.generatedTest.subCategories=this.subCategories.value;
-      debugger
+      this.generatedTest.test.teacherId=this.userService.user.teacherId;
       this.apiService.createGeneratedTest(this.generatedTest).subscribe(
         (res: Test) => {
           this.userService.testsForTeacher.push(res);
@@ -95,7 +95,7 @@ export class CreateTestComponent implements OnInit {
     }
     else {
       this.simpleTest.classes = this.classes.value;
-      
+      this.simpleTest.test.teacherId=this.userService.user.teacherId;
     //  this.simpleTest.questions = this.questions.value;
       this.apiService.createSimpleTest(this.simpleTest).subscribe(
         (res: Test) => {
@@ -130,6 +130,7 @@ export class CreateTestComponent implements OnInit {
                 // for (c in this.apiService.subCategoriesForCat) {
                 //   this.userService.questionsForTeacher.push((res.value as Question[]).filter(q => q.sub_category_id == c.sub_category_id));
                 // }
+                this.userService.questionsForTeacher=[];
                 // @ts-ignore
                 res['value'].forEach(v=>{
                   if(this.apiService.subCategoriesForCat.find(c=>c.sub_category_id==v.sub_category_id))
