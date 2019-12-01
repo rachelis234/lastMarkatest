@@ -31,6 +31,7 @@ namespace DAL
         public int level { get; set; }
         public Nullable<double> quesPercent { get; set; }
         public Nullable<int> teacherId { get; set; }
+        public string name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<@class> classes { get; set; }

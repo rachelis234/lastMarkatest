@@ -104,6 +104,7 @@
     <Property Name="teacherId" Type="Int32" />
     <NavigationProperty Name="teacher" Relationship="rdTestsModel.FK__test__teacherId__4F7CD00D" FromRole="test" ToRole="teacher" />
     <NavigationProperty Name="students_mark" Relationship="rdTestsModel.FK__students___test___52593CB8" FromRole="test" ToRole="students_mark" />
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="type">
     <Key>

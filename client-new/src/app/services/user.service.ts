@@ -49,4 +49,16 @@ export class UserService {
     return this.httpService.post(environment.api+'/Student/saveMark', studentMark);
 
   }
+  getMarks(studentId){
+    return this.httpService.get(environment.api+'/Student/getMarks/' + studentId);
+
+  } 
+  getStudentMarks(studentId, teacherId){
+    return this.httpService.get(environment.api+'/Student/getStudentMarks/' + studentId+"/"+teacherId);
+
+  }
+  getAllStudentMarks( teacherId){
+    return this.httpService.get(environment.api+'/Teacher/getStudentsMarks/' +teacherId);
+
+  }
 }

@@ -21,6 +21,9 @@ export class ViewStudentComponent implements OnInit {
        this.student=this.apiService.studentsForClass.find(s=>s.userId==+data['studentId']);
     });
     this.class=this.userService.classesForTeacher.find(c=>c.class_id==this.student.class_id);
+
   }
+
+
 
 }

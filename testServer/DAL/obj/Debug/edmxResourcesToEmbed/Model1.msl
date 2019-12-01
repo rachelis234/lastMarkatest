@@ -79,6 +79,7 @@
     <EntitySetMapping Name="tests">
       <EntityTypeMapping TypeName="rdTestsModel.test">
         <MappingFragment StoreEntitySet="test">
+          <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="teacherId" ColumnName="teacherId" />
           <ScalarProperty Name="test_id" ColumnName="test_id" />
           <ScalarProperty Name="test_date" ColumnName="test_date" />

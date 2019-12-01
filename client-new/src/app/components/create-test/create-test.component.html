@@ -44,7 +44,7 @@
 
 
 <form class="container example-form" dir="rtl">
-  <div class="row col-md-12">
+  <div class="row col-md-6">
   <div>
     <label>
       הכנס תאריך מבחן
@@ -58,6 +58,16 @@
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
   </div>
+
+  <div class="row col-md-6">
+      <div>
+        <label>
+          הכנס שם מבחן
+        </label>
+      </div>
+      
+      <input type="text" [(ngModel)]="test.name">
+      </div>
   <!-- <div>
     <md-input-container>
 

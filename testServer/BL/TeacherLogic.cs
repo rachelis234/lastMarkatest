@@ -41,6 +41,17 @@ namespace BL
             }
         }
 
+        
+        public static List<student_markDTO> GetMark(int teacherId)
+        {
+            using (Entities e = new Entities())
+            {
+                var studentsIds = e.students.Where(s => s.@class.teacher_id == teacherId).Select(s => s.student_id).ToList();
+                var marks = e.students_mark.Where(sm => studentsIds.Contains(sm.student_id)).ToList();
+                return student_markCasting.studentsMarkToDTO(marks);
+            }
+        }
+
         public void DeleteTeacher(int id)
         {
             using (Entities e = new Entities())

@@ -14,6 +14,8 @@ namespace DTO
         public TimeSpan test_end_time { get; set; }
         public double over_mark { get; set; }
         public int level { get; set; }
+        public string name { get; set; }
+
         public Nullable<double> quesPercent { get; set; }
         public Nullable<int> teacherId { get; set; }
 

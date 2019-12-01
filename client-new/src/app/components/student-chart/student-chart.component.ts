@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
+import { UserService } from 'src/app/services/user.service';
 const data = {
     chart: {
       caption: "Countries With Most Oil Reserves [2017-18]",
@@ -58,7 +59,8 @@ export class StudentChartComponent implements OnInit {
   dataFormat = "json";
   dataSource = data;
   studentId:number;
-  constructor(private router:ActivatedRoute,private apiService:ApiService) { 
+  marks;
+  constructor(private router:ActivatedRoute,private apiService:ApiService, private userService:UserService) { 
   }
 
   ngOnInit() {
@@ -68,5 +70,9 @@ export class StudentChartComponent implements OnInit {
    this.router.params.subscribe(data => {
     this.studentId=+data['studentId'];
  });
+
+ this.userService.getMarks(this.userService.user.studentId).subscribe(res=>{
+  this.marks=res;
+ })
   }
 }

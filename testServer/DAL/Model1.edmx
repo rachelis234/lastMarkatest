@@ -111,6 +111,7 @@ warning 6002: The table/view 'r&dTests.dbo.sub_category_test' does not have a pr
           <Property Name="level" Type="int" Nullable="false" />
           <Property Name="quesPercent" Type="float" />
           <Property Name="teacherId" Type="int" />
+          <Property Name="name" Type="nvarchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="test_question">
           <Key>
@@ -556,6 +557,7 @@ warning 6002: The table/view 'r&dTests.dbo.sub_category_test' does not have a pr
           <Property Name="teacherId" Type="Int32" />
           <NavigationProperty Name="teacher" Relationship="rdTestsModel.FK__test__teacherId__4F7CD00D" FromRole="test" ToRole="teacher" />
           <NavigationProperty Name="students_mark" Relationship="rdTestsModel.FK__students___test___52593CB8" FromRole="test" ToRole="students_mark" />
+          <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="type">
           <Key>
@@ -903,6 +905,7 @@ warning 6002: The table/view 'r&dTests.dbo.sub_category_test' does not have a pr
           <EntitySetMapping Name="tests">
             <EntityTypeMapping TypeName="rdTestsModel.test">
               <MappingFragment StoreEntitySet="test">
+                <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="teacherId" ColumnName="teacherId" />
                 <ScalarProperty Name="test_id" ColumnName="test_id" />
                 <ScalarProperty Name="test_date" ColumnName="test_date" />

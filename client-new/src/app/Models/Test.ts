@@ -9,4 +9,5 @@ export class Test{
     enable:boolean;
     level:number;
     teacherId:number;
+    name:string
     }

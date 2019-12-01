@@ -147,6 +147,24 @@ namespace BL
             }
         }
 
+        public static List<student_markDTO> getStudentMarks(int studentId, int teacherId)
+        {
+            using (Entities e = new Entities())
+            {
+                var marks = e.students_mark.Where(sm => sm.student.userId == studentId&& sm.test.teacherId==teacherId).ToList();
+                return student_markCasting.studentsMarkToDTO(marks);
+            }
+        }
+
+        public static List<student_markDTO> GetMark(int studentId)
+        {
+            using (Entities e = new Entities())
+            {
+                var marks = e.students_mark.Where(sm => sm.student_id == studentId).ToList();
+               return    student_markCasting.studentsMarkToDTO(marks);
+            }
+        }
+
         public static bool SaveMark(student_markDTO studentMark)
         {
             using (Entities e = new Entities())

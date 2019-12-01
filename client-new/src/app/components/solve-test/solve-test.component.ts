@@ -71,15 +71,15 @@ this.userService.solveTest.selectedAnswer.forEach(ans=>{
   else if(ans.isCorrect==true)
   mark+=point;
 });
-debugger
+
 var sm= new studentMark();
 sm.mark=Math.round(mark)  ;
 sm.test_id=this.userService.solveTest.test.test_id;
 sm.student_id=this.userService.user.studentId;
 //sm.studentId=
 this.userService.saveMark(sm).subscribe(res=>{
-  alert("yout mark is" + mark);
+  alert("yout mark is" + Math.round(mark) );
 })
-debugger
+
 }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Student } from 'src/app/Models/Student';
 import { ApiService } from 'src/app/services/api.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-edit-student',
@@ -13,7 +14,8 @@ export class EditStudentComponent implements OnInit {
   studentId:number;
   student:Student;
   index:number;
-  constructor(private router:ActivatedRoute,private apiService:ApiService,private route:Router) {
+  marks;
+  constructor(private router:ActivatedRoute,private apiService:ApiService,private route:Router, private userService:UserService) {
     this.router.params.subscribe(data => {
       this.studentId = +data['studentId'];
     });
@@ -22,6 +24,10 @@ export class EditStudentComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.userService.getStudentMarks(this.studentId,this.userService.user.teacherId ).subscribe(res=>{
+      debugger
+this.marks=res;
+    })
   }
   editStudent(){
     this.apiService.editStudent(this.student).subscribe(

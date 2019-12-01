@@ -16,7 +16,9 @@ namespace BL.Casting
             {
                 mark = s.mark,
                 student_id = s.student_id,
-                test_id = s.test_id
+                test_id = s.test_id,
+                student= s.student!=null? StudentCasting.StudentToDAL(s.student):null,
+                test=s.test!=null? TestCasting.TestToDAL(s.test):null
             };
         }
         public static student_markDTO studentMarkToDTO(students_mark s)
@@ -25,7 +27,9 @@ namespace BL.Casting
             {
                 mark=s.mark,
                 student_id=s.student_id,
-                test_id=s.test_id
+                test_id=s.test_id,
+                student = s.student != null ? StudentCasting.StudentToDTO(s.student) : null,
+                test = s.test != null ? TestCasting.TestToDTO(s.test) : null
             };
         }
         public static List<students_mark> studentsMarkToDAL(List<student_markDTO> students_marksDTO)
@@ -34,7 +38,7 @@ namespace BL.Casting
             students_marksDTO.ToList().ForEach(c => studentsMark.Add(studentMarkToDAL(c)));
             return studentsMark;
         }
-        public static List<student_markDTO> ClassesToDTO(List<students_mark> students_marksDTO)
+        public static List<student_markDTO> studentsMarkToDTO(List<students_mark> students_marksDTO)
         {
             List<student_markDTO> studentsMarkDTO = new List<student_markDTO>();
             students_marksDTO.ToList().ForEach(tc => studentsMarkDTO.Add(studentMarkToDTO(tc)));

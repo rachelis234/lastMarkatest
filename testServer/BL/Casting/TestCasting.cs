@@ -23,7 +23,8 @@ namespace BL.Casting
                 
                 level = t.level,
                 quesPercent = t.quesPercent,
-                teacherId=t.teacherId
+                teacherId=t.teacherId,
+                name=t.name
                 //class_test = e.class_test.Where(c => c.test_id == t.test_id).ToList()
                 //            public int test_id { get; set; }
                 //public System.DateTime test_date_start { get; set; }
@@ -44,7 +45,8 @@ namespace BL.Casting
                 test_id = t.test_id,
                 over_mark = t.over_mark,
                 teacherId=t.teacherId,
-                level = t.level
+                level = t.level,
+                name=t.name
             };
         }
         public static List<test> TestsToDAL(List<TestDTO> testsDTO)

@@ -106,6 +106,7 @@ warning 6002: The table/view 'r&dTests.dbo.sub_category_test' does not have a pr
     <Property Name="level" Type="int" Nullable="false" />
     <Property Name="quesPercent" Type="float" />
     <Property Name="teacherId" Type="int" />
+    <Property Name="name" Type="nvarchar" MaxLength="30" />
   </EntityType>
   <EntityType Name="test_question">
     <Key>
