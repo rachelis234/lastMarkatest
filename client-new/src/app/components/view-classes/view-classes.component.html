@@ -24,14 +24,19 @@
 <p>6tgu6</p>
 <p>6tgu6</p>
 <p>6tgu6</p>
-<p>6tgu6</p>
 
-
-<ul>
-  <li *ngFor="let i of userService.classesForTeacher" value="i.class_id">
-    <a [routerLink]="'/teachersettings/viewClasses/viewStudents/'+i.class_id">{{i.class_name}}</a>
-  </li>
-</ul>
+<mat-nav-list>
+  <a
+    style="text-decoration:none"
+    *ngFor="let i of userService.classesForTeacher"
+    value="i.class_id"
+    [routerLink]="'/teachersettings/viewClasses/viewStudents/' + i.class_id"
+    mat-list-item
+    href="..."
+  >
+    {{ i.class_name }}
+  </a>
+</mat-nav-list>
 <!-- <mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="name">
         <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
