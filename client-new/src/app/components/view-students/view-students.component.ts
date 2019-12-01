@@ -52,7 +52,6 @@ first:boolean=false;
       );
     });
 
-    debugger
     this.userService.getAllStudentMarks(this.userService.user.teacherId).subscribe(res=>{
       this.marks=res;
       if(this.dataSource!=null&&this.first==false){
