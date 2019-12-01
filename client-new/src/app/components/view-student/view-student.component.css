@@ -1,0 +1,12 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  border: #16a085 5px solid;
+}
+
+.example-full-width {
+  width: 100%;
+  color: #16a085;
+}

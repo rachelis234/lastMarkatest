@@ -58,6 +58,7 @@ import { StudentChartComponent } from "./components/student-chart/student-chart.
 // import { FusionChartsModule } from "angular-fusioncharts";
 import * as FusionCharts from "fusioncharts";
 import * as Charts from "fusioncharts/fusioncharts.charts";
+import { MatIconModule } from "@angular/material/icon"; // <----- Here
 
 import * as FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 import { MatListModule } from "@angular/material/list";
@@ -125,7 +126,8 @@ import { SendEmailComponent } from "./components/send-email/send-email.component
     // FusionChartsModule,
     ChartsModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [UserService, CookieService],
   bootstrap: [AppComponent]

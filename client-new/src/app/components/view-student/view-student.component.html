@@ -1,12 +1,57 @@
-<p>Student Identity: </p>
-<p>{{student.user.user_id_number}}</p>
-<p>Student Password: </p>
-<p>{{student.user.user_password}}</p>
-<p>Student Name: </p>
-<p>{{student.user.user_name}}</p>
-<p>Student Email: </p>
-<p>{{student.user.user_mail}}</p>
-<p>Student Class: </p>
-<p>{{class.class_name}}</p>
-<p>Has Extra Time: </p>
-<p>{{student.extra_time}}</p>
+<p>Has Extra Time:</p>
+<p>{{ student.extra_time }}</p>
+<i class="material-icons">
+  arrow_back_ios
+</i>
+<mat-icon>perm_identity</mat-icon>
+<!-- ---------------------------------------------------------------------------------- -->
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input
+      matInput
+      placeholder="Student Identity:"
+      value="{{ student.user.user_id_number }}"
+      disabled
+    />
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input
+      matInput
+      placeholder="Student Password:"
+      value="{{ student.user.user_password }}"
+      disabled
+    />
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input
+      matInput
+      placeholder="Student Name:"
+      value="{{ student.user.user_name }}"
+      disabled
+    />
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input
+      matInput
+      placeholder="Student Email:"
+      value="{{ student.user.user_mail }}"
+      disabled
+    />
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input
+      matInput
+      placeholder="Student Class:"
+      value="{{ class.class_name }}"
+      disabled
+    />
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input
+      matInput
+      placeholder="Has Extra Time:"
+      value="{{ student.extra_time }}"
+      disabled
+    />
+  </mat-form-field>
+</form>

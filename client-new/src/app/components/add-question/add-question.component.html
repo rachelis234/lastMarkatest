@@ -1,73 +1,115 @@
 <form>
-  <!-- <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
-                <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
-                  <button mat-icon-button disabled></button>
-                  {{node.item}}
-                </mat-tree-node>
-                <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
-                  <button mat-icon-button
-                          [attr.aria-label]="'toggle ' + node.filename" matTreeNodeToggle>
-                    <mat-icon class="mat-icon-rtl-mirror">
-                      {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
-                    </mat-icon>
-                  </button>
-                  {{node.item}}
-                  <mat-progress-bar *ngIf="node.isLoading"
-                                    mode="indeterminate"
-                                    class="example-tree-progress-bar"></mat-progress-bar>
-                </mat-tree-node>
-              </mat-tree> -->
+  <p>gfgbdfxgb</p>
+  <p>gfgbdfxgb</p>
 
-
-
-  <!-- <tree-root [nodes]="nodes" [options]="options">
-            <ng-template #treeNodeTemplate let-node let-index="index">
-                 <a (click)="nodeClick(node.data)">{{ node.data.name }}</a>
-            </ng-template>
-        </tree-root>                 -->
-
+  <p>gfgbdfxgb</p>
 
   <div>
-    <select name="select" #subject [(ngModel)]="categoryId" (ngModelChange)="getSubCategoriesForCat()">
-      <option *ngFor="let cat of userService.categoriesForTeacher" [value]="cat.category_id">
-        {{cat.category_name}}
+    <select
+      name="select"
+      #subject
+      [(ngModel)]="categoryId"
+      (ngModelChange)="getSubCategoriesForCat()"
+    >
+      <option
+        *ngFor="let cat of userService.categoriesForTeacher"
+        [value]="cat.category_id"
+      >
+        {{ cat.category_name }}
       </option>
     </select>
   </div>
   <div *ngIf="categoryId">
     <select name="subC" #subCategory [(ngModel)]="question.sub_category_id">
-      <option *ngFor="let subC of apiService.subCategoriesForCat" [value]="subC.sub_category_id">
-        {{subC.sub_category_name}}
+      <option
+        *ngFor="let subC of apiService.subCategoriesForCat"
+        [value]="subC.sub_category_id"
+      >
+        {{ subC.sub_category_name }}
       </option>
     </select>
   </div>
   <div>
-    <p>{{this.enum}}</p>
+    <p>בחר סוג שאלה</p>
   </div>
   <div *ngFor="let type of apiService.types">
-    <label for="typeId{{type}}">
-      <input id="typeId{{type}}" [value]='type.type_id' type="radio" name="qType" [(ngModel)]="question.type_id">
-      {{type.type_name}}
-    </label>
+    <label for="typeId{{ type }}">{{ type.type_name }}</label>
+    <input
+      id="typeId{{ type }}"
+      [value]="type.type_id"
+      type="radio"
+      name="qType"
+      [(ngModel)]="question.type_id"
+    />
   </div>
-  <div *ngIf="type.type_id==1">
-    <label>
+  <ng-container *ngIf="question.type_id == 1">
+    <form [formGroup]="answerForm">
+      <label>
+        Question:
+        <input formControlName="title" [(ngModel)]="question.question_text" />
+      </label>
+      <h2>answers</h2>
+      <div formArrayName="answers_array">
+        <div
+          *ngFor="let item of answers_array.controls; let ansIndex = index"
+          [formGroupName]="ansIndex"
+        >
+          <p *ngIf="ansIndex == 1">The first answer is correct</p>
+          <label> ans: <input formControlName="ans" /> </label>
+          <button type="button" (click)="deleteAnswer(ansIndex)">
+            Delete Answer
+          </button>
+        </div>
+        <button type="button" (click)="addAnswer()">Add Answer</button>
+      </div>
+    </form>
+    {{ this.answerForm.value | json }}
+    <!-- <label>
       הכנס טקסט של השאלה
     </label>
-    <input type="text" name="questionText" [(ngModel)]="question.question_text">
-  </div>
+    <textarea
+      name="questionText"
+      [(ngModel)]="question.question_text"
+    ></textarea>
+    <div>
+    <label>הכנס טקסט של תשובה</label>
+    <input type="text" />
+  </div> -->
+  </ng-container>
+  <ng-container *ngIf="question.type_id == 2">
+    <div>
+      <label>הכנס טקסט של השאלה</label>
+      <input type="text" [(ngModel)]="question.question_text" name="qText" />
+
+      <label>התשובה הנכונה</label>
+      <label for="yes">כן</label>
+      <input
+        id="yes"
+        [value]="true"
+        type="radio"
+        name="correct"
+        [(ngModel)]="question.isCorrect"
+      />
+      <label for="no">לא</label>
+      <input
+        id="no"
+        [value]="false"
+        type="radio"
+        name="correct"
+        [(ngModel)]="question.isCorrect"
+      />
+    </div>
+  </ng-container>
+  <ng-container *ngIf="question.type_id == 3">
+    <div></div>
+  </ng-container>
+
   <div>
-    <label>הכנס טקסט של תשובות</label>
-  <input type="text" >
-</div>
-  <div>
-    <label>
-      הכנס רמת שאלה
-    </label>
-    <input type="number" min="1" max="20" [(ngModel)]="question.level" name="qlevel">
-  </div>
-  <div>
-    <input type="button" value="Add" (click)="addQuestion()">
+    <input type="button" value="Add" (click)="addQuestion()" />
   </div>
 </form>
-}
+
+<!-- --------------------------------------------------- -->
+<!-- export class Answer { answer_id:number; question_id:number; answer_text:string;
+} question_id: number; sub_category_id: number; type_id: number; question_text:
+string; level: number; } -->

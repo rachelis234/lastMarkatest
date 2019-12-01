@@ -114,6 +114,12 @@
           >
           |
           <a
+            (click)="putAction('View', element)"
+            [routerLink]="'/teachersettings/viewDetails/' + element.userId"
+            >View Details</a
+          >
+          |
+          <a
             (click)="
               putAction('Delete', element); deleteStudent(element.userId)
             "
